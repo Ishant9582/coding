@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .container{
+            width: 400px;
+            height: 400px;
+            border: 5px solid black;
+        } */
+        /* for scrolling */
+        .container{
+            width: 400px;
+            height: 150px;
+            border: 5px solid black;
+            overflow: scroll;
+            /* agr relative nhi likha to green vala box move nhi krega */
+            position: relative;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #14b4cd;
+            position: relative;
+        }
+        .box1{
+            background-color: red;
+        }
+
+
+
+        .box2{
+            background-color: rgb(50, 199, 39);
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            
+        }
+        /* isme parent k hisab se changes ayenge */
+        .box3{
+            background-color: rgb(205, 35, 162);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+    </div>
+</body>
+</html>

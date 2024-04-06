@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: black;
+            width: 1450px;
+            height: 600px;
+            position: relative;
+            border-radius: 10px;
+        }
+        .heading{
+            text-align: center;
+            position: relative;
+            top: 20px;
+            bottom: 20px;
+        }
+        img{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            left: 70px;
+            top: 20px;
+        }
+        .subcontainer{
+            display: flex;
+            justify-content: space-around;
+        }
+        .box-1{
+            background-color: skyblue;
+            width: 300px;
+            height: 500px;
+            position: relative;
+            bottom: 20px;
+            top: 20px;
+            padding-left: 20px;
+            /* margin: 20px 0px 20px 50px; */
+            overflow: hidden;
+            
+        }
+        .box-2{
+            background-color: red;
+            width: 300px;
+            height: 500px;
+            position: relative;
+            bottom: 20px;
+            top: 20px;
+            padding-left: 20px;
+            overflow: hidden;
+            /* margin: 20px 0px 20px 20px; */
+            
+        }
+        .box-3{
+            background-color: darkblue;
+            width: 300px;
+            height: 500px;
+            position: relative;
+            top: 20px;
+            bottom: 20px;
+            padding-left: 20px;
+            /* margin: 20px 50px 20px 20px; */
+            overflow: hidden;
+            
+        }
+        p{
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h3 style="color: red;">full stack web development</h3>
+        </div>
+        <div class="subcontainer">
+            <div class="box-1">
+                
+                <img src="data:image/png;base64,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" alt="">
+                <p>Lorema maiores sunt. Fuga error illum beatae omnis assumenda rerum modi mollitia dolores a, consequuntur velit, quisquam nisi voluptate inventore est pariatur. Maiores nostrum, molestias itaque adipisci dolore sed vel, eligendi id perferendis corporis facere nobis laboriosam, quasi inventore tempore corrupti reprehenderit! Quibusdam, corporis quos cum natus recusandae aut earum ex aperiam itaque nisi facilis blanditiis asperiores! Iure, odit hic! Soluta ex similique illo officia, sapiente earum, sed distinctio deleniti possimus, impedit sunt harum laborum illum natus. Quidem, incidunt? Consequatur libero ad a quia nulla eligendi provident aut iusto, atque aliquid amet, modi quam necessitatibus adipisci! Fugit similique quasi unde reiciendis? Veritatis sunt beatae voluptatum voluptatibus aut mollitia excepturi tenetur suscipit earum.</p>
+            </div>
+            <div class="box-2">
+                
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="">
+                <p>Lorema maiores sunt. Fuga error illum beatae omnis assumenda rerum modi mollitia dolores a, consequuntur velit, quisquam nisi voluptate inventore est pariatur. Maiores nostrum, molestias itaque adipisci dolore sed vel, eligendi id perferendis corporis facere nobis laboriosam, quasi inventore tempore corrupti reprehenderit! Quibusdam, corporis quos cum natus recusandae aut earum ex aperiam itaque nisi facilis blanditiis asperiores! Iure, odit hic! Soluta ex similique illo officia, sapiente earum, sed distinctio deleniti possimus, impedit sunt harum laborum illum natus. Quidem, incidunt? Consequatur libero ad a quia nulla eligendi provident aut iusto, atque aliquid amet, modi quam necessitatibus adipisci! Fugit similique quasi unde reiciendis? Veritatis sunt beatae voluptatum voluptatibus aut mollitia excepturi tenetur suscipit earum.</p>
+            </div>
+            <div class="box-3">
+                
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAz1BMVEX////OqAv80yns7OzLowDz69bNpgDt7e/l3cbguRjLpQjzyiT80h780AD80iPNpQD94Xrt7/TawGn82E/x58jizYn81j/933LPqgD9/PXUszro1p/810b82lb93WXu8Pf+8cX+7rns37TTs0L++ODInQDYu1ro16b38eD69+rkvy/SrybYulDdxHT93F/94oP95ZT+663v477k0JH+88zp5dPwyjPYsyTrxCT967DhyoH+6J7SsC707NDdtxzcuC3l2rvh06ntyTvqyETgv0MDlMefAAAJCElEQVR4nO2d+1vaSBSGIcR4aUgENIC3qlAVQcXbduutrfX//5s2J0BmBhI4k4Ezdp/z/raukL7PhMzHN5NYKjEMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzDMX0x7zS7tlRvufHNt8m1n5YZrbtkm7trKDXuWDVd/lpYsG65esNTyLAp6LQLDPauGewSGZ1YNzwgM61YN6wSGu6FFw3CXwPDcquE5geGpoeFWAYThKYHhjtmEePmlAOmr3dWHtlLpwshw69LR50s6iO4FgWHP6CwtZPhPahj2CAzbRrOFqSFBLI1jG7nhv6mhRyFY6psMYiHDy4mh1ycxHFg0HJAYXpEbvk1e7V2RGBrFtkKG3yevJgltpdI+uWE/NdwnMbwzmfILGaavJglthrGtkKGINBShzbBtK2IYCcPVN21Am9pQiqUUoS2G+kojIk1II1gqa0yInowwDBbiJwTwy++T45E0bYBG2+bVJaDDGhtGMQcJjRGHCdcJR2OazWYjkMeQpGkDNNo2ryb4uhGODf0b7KGe/fjXN4lDm1bb1lqvpKwLw23soYZg+DM9SymaNkAjtpka3iSGk3cjCm1abZup4REYpu9GFNq02rYcwyb2UMmVRhjShDat2GZqGCmGRKFNq20zNUzmQ+rQprVIOmv4pmPY9tVYShTadIJpq5JpeIQ8Uq/qyE0bxQLwCPR86GWPYaBlSB9LNdo2U8MuGIoeqrxSKxl022Zq+JAYpu/WWamVDLptyzO8Rh7oBAypmzYAHdu8spnhD7iWiqbtaaVWMui2LcNwU8cw+Wohmrb7lVrJoNu2PMND+d2aVd+vToCvvVXxX45iSBXaNGIbynDbn19i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" alt="">
+                <p>Lorema maiores sunt. Fuga error illum beatae omnis assumenda rerum modi mollitia dolores a, consequuntur velit, quisquam nisi voluptate inventore est pariatur. Maiores nostrum, molestias itaque adipisci dolore sed vel, eligendi id perferendis corporis facere nobis laboriosam, quasi inventore tempore corrupti reprehenderit! Quibusdam, corporis quos cum natus recusandae aut earum ex aperiam itaque nisi facilis blanditiis asperiores! Iure, odit hic! Soluta ex similique illo officia, sapiente earum, sed distinctio deleniti possimus, impedit sunt harum laborum illum natus. Quidem, incidunt? Consequatur libero ad a quia nulla eligendi provident aut iusto, atque aliquid amet, modi quam necessitatibus adipisci! Fugit similique quasi unde reiciendis? Veritatis sunt beatae voluptatum voluptatibus aut mollitia excepturi tenetur suscipit earum.</p>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>

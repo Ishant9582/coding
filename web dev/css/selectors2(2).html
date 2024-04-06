@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color: #34d514;
+        }
+        /* for selection of whole content use above */
+        h1{
+            color: blue;
+            /* for selection of only that part  */
+        }
+        .bg{
+            color: brown;
+            /* for selection of class selection */
+        }
+        #hh{
+            color: aquamarine;
+            /* for id */
+        }
+        a[target="hello"]{
+            color: blue;
+        }
+        h1,h2,h3{
+            color: black;
+        }
+        /* ye krne se bus h1 ki change hui baki ki nhi bcoz unki priority jyada  */
+    </style>
+</head>
+<body>
+         <h1>Lorem ipsum dolor sit.</h1>
+         <h2 class="bg">Lorem ipsum dolor sit amet.</h2>
+         <h3 id="hh" class="bg">Lorem ipsum dolor sit amet consectetur.</h3>
+         <!-- id ki priority class se jyada hoti hai -->
+         <a href="https:/www.google.com" target="hello">google</a>
+         <a href="https:/www.yahoo.com" target="g">yahoo</a>
+</body>
+</html>

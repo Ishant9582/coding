@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            /* no use of above until we define height */
+            /* height: 150px;                           like this*/  
+            /* flex-wrap: nowrap; */
+            /* bcoz of nowrap then is no rapping of boxes when we shrink size of page */
+            flex-wrap: wrap;
+        }
+        .display{
+            padding: 30px;
+            border: 1px solid black;
+            height: 50px;
+            width: 250px;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display">one </div>
+        <div class="display">two</div>
+        <div class="display">three</div>
+
+    </div>
+</body>
+</html>

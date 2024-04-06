@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+
+            /* grid-template-rows: 20px 20px 30px; */
+            /* grid-template-rows: auto auto auto; */
+            grid-template-columns: 100px 200px 300px;
+            grid-template-rows: repeat(3,fr);
+            
+       
+
+            
+        }
+        .item{
+            border: 2px solid black;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      
+            <div class="item">one</div>
+            <div class="item">two</div>
+            <div class="item">three</div>
+            <div class="item">four</div>
+            <div class="item">five</div>
+            <div class="item">five</div>
+            <div class="item">six</div>
+            
+      
+
+    </div>
+</body>
+</html>

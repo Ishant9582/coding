@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            /* width: 100px;
+            height: 100px;             or we can write here also
+            background-color: red;
+            border: 5px solid black; */
+
+        }
+        .zindex{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 5px solid black;
+            position: absolute;
+        }
+        /* .one{
+            background-color: brown;
+        }
+        .two{
+            background-color:pink;
+        }
+        .three{
+            background-color: orange;
+        } */
+        /* if no zindex in above then jo last m colour and written usko prioritise kia jayega */
+        .one{
+            background-color: brown;
+            z-index: 1;
+        }
+        .two{
+            background-color:pink;
+            z-index: 3;
+            /* jiska zindex jyada vo upper */
+        }
+        .three{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div  class="zindex one">zindex1</div>
+        <div class="zindex two">zindex2</div>
+        <div class="zindex three">zindex3</div>
+    </div>
+    
+</body>
+</html>

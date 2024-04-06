@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            color: blue;
+            background-color: blanchedalmond;
+
+        }
+        /* to select class we use this  */
+        .bgorange{
+            background-color: orange;
+        }
+        /* to select id we use this  */
+        #bgred{
+            background-color: red;
+        }
+        a[target="son"]{
+            background-color:  pink;
+        }
+        /* group selectors */
+        h4,h5,h6{
+            background-color: brown;
+        }
+        /* ul ke andar hi li aana chahiye tbhi implementation hoga */
+        ul li {
+            background-color: pink;
+        }
+        header > a {
+            background-color: darkgreen;
+        }
+        /* here ~ this sign denotes sibling */
+        /* and here it is used to denote sibling of img  */
+        img ~p{
+            background-color: hotpink;
+        }
+        /* if we use img+p then only one p will be operated as it select just after only  */
+        
+
+    </style>
+</head>
+<body>
+    <h1>hello guys</h1>
+    <h2 class="bgorange">wow nice</h2>
+    <!-- here it will follow red in h3 as id specificity is more  -->
+    <h3 id="bgred" class="bgorange">Lorem ipsum dolor sit amet.</h3>
+    <a class="bgorange" href="https://pwskills.com">pwskills</a>
+    <a target="son" href="https://www.google.com">google</a>
+    <!-- we use target here for specification when we used style  -->
+    <h4>helooooooo</h4>
+    <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+    <h6>Lorem ipsum dolor sit amet consectetur adipisicing.</h6>
+    <!-- taking list items -->
+    <ul>
+
+        <li>one</li>
+        <li>two </li>
+        <li>three</li>
+    </ul>
+    <header>
+        <a href="https://www.google.com">google</a>
+        <nav>
+            <ul>
+                <li>home</li>
+                <a href="#">logo</a> 
+                <!-- ye wala isliye highlight nhi hua bcoz header > a bus parent p focus krta  -->
+                <!-- and iske parent a nav amd a hai  -->
+            </ul>
+        </nav>
+        <a href="#">bing</a>
+    </header>
+    <div>
+        <img src="#" alt="">
+        <p>hro</p>
+        <p>change me too</p>    
+        <!-- above operation will take place  -->
+        <div>
+            <p>hlo</p>
+            <!-- here it is not sibling of img as div is sibling of img  -->
+        </div>
+    </div>
+
+    
+</body>
+</html>

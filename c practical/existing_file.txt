@@ -1,0 +1,1 @@
+cd "c:\Users\Ishant\OneDrive\Desktop\coding\c practical\" ; if ($?) { gcc wap13.c -o wap13 } ; if (

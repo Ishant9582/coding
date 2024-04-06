@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <style>
+       /* h1:hover{
+            background-color: brown;
+        }*/
+        input:disabled{
+            background-color: rgb(54, 58, 161);
+
+        }
+        button:focus{
+            background-color: darkgreen;
+        }
+        div:first-child{
+            background-color: rgb(139, 0, 120) 0, 19);
+        }
+        div:nth-child(2n){
+            background-color: gold;
+        }
+        /* special */
+        /* special */
+        h1::after{
+            content:"after!";
+            color: darkorange;
+        }
+        h1::before{
+            content:"before!";
+            color: rgb(60, 0, 255);
+        }
+        p::first-line{
+            background-color: forestgreen;
+            font: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>hello logo</h1>
+    <input type="checkbox" name="" id="">
+    <button>submit</button>
+    <p>j</p> <!-- agr yha p p nhi likhenge to i j k teno yellow honge but why -->
+  
+    <input type="text">
+    <input type="text" disabled="true">
+    <div>
+        <!-- to use it in stylling it is must to use div  -->
+        <div>i</div>
+        <div>o</div>
+        <div>k</div>
+    </div>
+    <h1>nachoooo</h1>
+    <p>
+        Lorem ipsum dolor sit amet.
+        sed
+        Lorem ipsum dolor sit amet.
+        pep
+        Lorem ipsum dolor sit amet.
+    </p>
+</body>
+</html>

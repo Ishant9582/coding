@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+        }
+        .nav{
+            position: relative;
+            border-radius:20px;
+            width:1400px;
+            left:25px;
+            height:75px;
+            position:fixed;
+            top:0;
+            box-shadow: 2px 2px 10px 2px rgb(48, 49, 44);
+            background-color: rgb(255, 255, 255);
+        }
+        .list{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .img{
+            width: 30px ;   
+            position:relative;
+            top:8px;
+            height:30px;    
+            align-items:center;
+        }
+        .link{
+            top:1px;
+            background-color: #ffffff;
+            border-radius:10px;
+            font-size:20px;
+            text-decoration:none;
+            color:rgb(139, 167, 38);
+            padding:10px;
+        }
+        #one{
+            position: relative;
+            left: -80px;
+            font-weight: bold;
+        }
+        #two{
+            position: relative;
+            left: 350px;
+            
+        }
+        #three{
+            position: relative;
+            left: 170px;
+            border: 1px solid black;
+            
+        }
+        #four{
+
+            width: 500px;
+            background-color: blue;
+            color: white;
+        }
+
+        .write{
+            position: relative;
+            top: 50px;
+            width: 700px;
+        }
+        h1{
+            font-size: 100px;
+        }
+        .content{
+            display: flex;
+        }
+        #img{
+            position: relative;
+            top: 200px;
+            left: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav">
+            <ul class="list" style="list-style: none;">
+                <li><a href="#" class="link" id="one"><img class="img" src="https://github.com/wpsadi/CODE-SPACE/blob/main/RESOURCE/CSS/CSS%20Workspace/Code-%20Flex%20in%20CSS/ASSIGNMENT/media/media-Q4/gmail-logo.png?raw=true" alt="">Gmail</a></li>
+                <li><a href="#" class="link" id="two">For work</a></li>
+                <li><a href="#" class="link" id="three">sign in</a></li>
+                <li><a href="#" class="link" id="four">create an acoount</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="content">
+
+                <div class="write">
+                    <h1>Secure , Smart and Easy to use email</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolorem facilis placeat deleniti, similique error facere, id recusandae fugiat natus sed, esse cupiditate? Aut molestiae exercitationem dignissimos consequuntur facilis cumque.</p>
+                    <br><br>
+                    <a target="_top" class="link" id="four" href="#" class="content-link">Create an Acount</a>
+                    <a target="_top" class="link" id="for-work" href="#" class="content-link">For Work</a>
+                </div>
+                <div id="img" style="float: right;" style="margin-left: 30px;">
+                    <img src="https://github.com/wpsadi/CODE-SPACE/blob/main/RESOURCE/CSS/CSS%20Workspace/Code-%20Flex%20in%20CSS/ASSIGNMENT/media/media-Q4/gmail-image.png?raw=true" alt="" title="welcome in gmail">
+                </div>
+             
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

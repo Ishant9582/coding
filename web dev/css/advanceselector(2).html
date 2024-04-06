@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1:hover{
+            background-color: #c34141;
+        }
+        /* jb m uski range mlekar jaunga jb colour change krega */
+        button:focus{
+            background-color: #2c2ea3;
+        }
+        /* jb click krunga tb colour change */
+        /* input{
+            background-color: #218e17;
+        } */
+        input:disabled{
+            background-color: #c1aa15;
+        }
+        input:required{
+            background-color: #ab0d0d;
+        }
+        div:first-child{
+            background-color: #ba1881;
+        } 
+         div:last-child{
+            background-color: #4042e1;
+        } 
+
+        div:nth-child(2n){
+            background-color: #21de1d;
+        } 
+        /* redo these div vale pparts */
+        h1::after{
+            content: "after!";
+            color: #61368f;
+        }
+        h1::before{
+            content: "before";
+            color: grey;
+        }
+        p::first-letter{
+            font-size: 50;
+            font-style: oblique;
+            color: rgb(43, 152, 152);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit.</h1>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <input type="checkbox" name="" id="">
+    <button>submit</button>
+    <input type="text" required="true">
+    <!-- required vale m jesa hoga vesa iska color ayega -->
+    <input type="checkbox" name="" id="">
+    <input type="text" placeholder="u cant write anything here sry"   disabled="true">
+    <!-- disable vale m jesa hoga vesa iska color ayega -->
+    <div>
+        <div>first</div>
+        <div>second</div>
+        <div>third</div>
+       
+    </div>
+    <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+    <h1>Lorem, ipsum dolor.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt cumque non possimus.</p>
+</body>
+</html>

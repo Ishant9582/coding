@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas:
+             "content image";
+            height: 90vh;
+            border: 1px solid black;
+            
+        }
+        .content{
+            margin: 30px;
+            align-self: center;
+            grid-area: content;
+        }
+        .image{
+            margin: 20px;
+            background-color: yellow;
+            width: 800px;
+            height: 625px;
+            grid-area: image;
+            
+        }
+        .img{
+         
+            height: 625px;
+            width: 600px;
+        }
+        .button{
+            background-color: black;
+            color: white;
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="content">
+        <h1>HEALTHY FOOD</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, placeat in quis natus non labore, odio fugit dolores quibusdam exercitationem eaque iste! Earum atque rerum unde rem eveniet, ratione temporibus minima vero cumque voluptate. Harum ab quidem quam necessitatibus minus!</p>
+        <input class="button" type="button" value="read more">
+    </div>
+    <div class="image">
+             <img class="img"  src="https://www.euroschoolindia.com/wp-content/uploads/2023/10/importance-of-eating-a-variety-of-fruits-for-kids-health-jpg.webp" alt="">
+    </div>
+    <nav>
+        <div class="nav">
+            <div class="hi"></div>
+        </div>
+    </nav>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item{
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+        .start{
+            justify-content: flex-start;
+        }
+        .end{
+            justify-content: flex-end;
+        }
+        .between{
+            justify-content: space-between;
+        }
+        .around{
+            justify-content: space-around;
+        }
+        .evenly{
+            justify-content: space-evenly;
+            /* space evenly distribute in this but no such case in around */
+        }
+        .center{
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <p>strt krooooooo</p>
+    <div >
+        <div class="container start">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+        <p>end kroo</p>
+        <div class="container end">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+        <p>between kro</p>
+        <div class="container betweem">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+        <p>around kro</p>
+        <div class="container around">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+        <p>evenly kro</p>
+        <div class="container evenly">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+        <p>center kro</p>
+        <div class="container center">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+    </div>
+</body>
+</html>

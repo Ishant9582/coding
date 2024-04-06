@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helo</title>
+   
+    <!-- this is internal -->
+    <!-- order of priority with external depends on which come after as it will have high priority -->
+    <style>
+        
+        h1{
+            color: rgb(59, 31, 101);
+            text-decoration: underline;
+            
+            text-align: center;
+            /* display has more priority then text align  */
+            
+            /* display: inline; */
+
+        }
+    </style>
+    <!-- this is external here its priority is more than internal as comes after it -->
+    <link rel="stylesheet" href="a.css">
+</head>
+<body>
+    <h1>hello</h1>
+    <!-- this is inline and it will have max priority -->
+    <!-- bcoz inline sbse bad m hi lgta hai  -->
+    
+    <!-- <h1 style="color: rgb(187, 237, 237);">hello guys</h1>  -->
+    
+</body>
+</html>
