@@ -8,6 +8,7 @@ button.addEventListener("click" , function(){
     dltbtn.classList.add("delete")
     dltbtn.innerText = "delete" ;
     item.append("   ") ;
+    item.classList.add("border")
     item.appendChild(dltbtn) ;
     ul.appendChild(item)
     inp.value="";
