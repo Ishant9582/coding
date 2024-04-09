@@ -5,7 +5,7 @@ while(true){
         console.log("quitting app")
         break;
     }
-    if(input == "list"){
+    if(input == "display"){
         console.log("show")
         for(task of a){
             console.log(task)

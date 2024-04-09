@@ -8,4 +8,6 @@ cars.unshift(4) ;
 console.log("after pusing in firs" , cars) ;
 cars.shift()
 console.log("deleted from first" , cars);
+cars.reverse();
+console.log(cars)
 
