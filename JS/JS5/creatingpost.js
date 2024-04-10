@@ -5,3 +5,4 @@ let post = {
     repost : 10 ,
     tags : ["apni barbadi" ,"@ishant" ] ,
 }
+console.log(post) ;

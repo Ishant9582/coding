@@ -14,3 +14,4 @@ console.log(student) ;
 delete student.city ;
 console.log("after deletion") ;
 console.log(student) ;
+console.log(student["age"]) ;
