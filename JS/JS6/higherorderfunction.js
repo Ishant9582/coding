@@ -3,9 +3,11 @@ function multi(func,count){
                 func() ;
     }
 }
+
 function single(){
     console.log("hello")
 }
+
 // let single = function(){
 //     console.log("hello")         
 // }
