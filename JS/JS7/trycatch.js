@@ -1,5 +1,6 @@
 console.log("helo")
 try{
+    console.log("eolo")
     console.log(a)
 }
 catch(e){

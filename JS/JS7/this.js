@@ -7,6 +7,7 @@ const student = {
     france : 55 ,
     getavg(){
         console.log(this) ;
+       // console.log(a)        //error
         let avg = (this.eng + this.hindi + this.france)/3 ;
         //or
         //let avg = (student.eng + student.hindi + student.france)/3 ;
@@ -14,7 +15,7 @@ const student = {
     }
 }
 function getwindow(){
-    console.log(this) ;
+    console.log(this)    ;
 }
 student.getavg();
 getwindow();
