@@ -1,0 +1,22 @@
+{
+  "name": "myprojectdir",
+  "version": "1.0.0",
+  "description": "helo guys",
+  "main": "index.js",
+  "scripts": {
+    "test": "ed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Ishant9582"
+  },
+  "keywords": [
+    "xrd"
+  ],
+  "author": "Ishant",
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.7.0",
+    "give-me-a-joke": "^0.5.1"
+  }
+}
