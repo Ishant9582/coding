@@ -12,7 +12,11 @@ let arr = [
         marks : 90 ,
     }
 ];
-let array = arr.map((s)=>{
+//let b = [1,2,3,4,56,7,8]
+let ar = arr.map((s)=>{
     return s.marks*2 ;
 })  ;
-console.log(array) ;
+// let array = b.map((s)=>{
+//     return s*2 ;
+// })  ;
+console.log(ar) ;

@@ -1,5 +1,5 @@
 const figlet = require("figlet")
-figlet("Hello Duniya!!", function (err, data) {
+figlet("Hello Du!!", function (err, data) {
     if (err) {
       console.log("Something went wrong...");
       console.dir(err);
