@@ -10,6 +10,7 @@ button.addEventListener("click" , get)
 // execution of all these are store in a function
 // helps in removing redundancy
 function get(){
+    console.dir(this)
     console.dir(this.innerText)
     this.style.color = "blue" ;
 }

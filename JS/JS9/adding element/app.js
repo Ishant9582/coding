@@ -1,19 +1,19 @@
 let a = document.createElement("p") ;
 console.dir(a) ;
-a.innerText = "helo lorem6"
-console.dir(a)
+a.innerText = "helo lorem6" ;
+console.dir(a) ;
 let body = document.querySelector("body") ;
-body.appendChild(a);
-let btn = document.createElement("button")
+body.appendChild(a) ;
+let btn = document.createElement("button") ;
 btn.innerText = "type" ;
-let btn2 = document.createElement("button")
+let btn2 = document.createElement("button") ;
 btn2.innerText = "type2" ;
-let btn3 = document.createElement("button")
+let btn3 = document.createElement("button") ;
 btn3.innerText = "type3" ;
-let c = document.querySelector("p")
+let c = document.querySelector("p") ;
 c.append(btn) ;
-let btn4 = document.createElement("button")
-btn4.innerText = "type4" ;
+let btn4 = document.createElement("button") ;
+btn4.innerText = "type4" ; 
 
 // for adding more data in a we can use 
 a.append("acha aiurbdcb cdbcj cjhd") ;

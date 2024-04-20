@@ -4,7 +4,7 @@ for(btn of btns){
         console.log("you entered");
     }
     console.dir(btn)
-    btn.onclick = function(){
+    btn.onclick = ()=>{
         alert("you click on btn")
     }
 }

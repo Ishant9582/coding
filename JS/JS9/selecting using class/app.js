@@ -1,8 +1,9 @@
 let a  = document.getElementsByClassName("oldImg") ;
-// for getting all objects present
-// for(let i = 0 ; i<a.length ; i++){
-//     console.dir(a[i]);
-// }
+//for getting all objects present
+console.dir(a)
+for(let i = 0 ; i<a.length ; i++){
+    console.dir(a[i]);
+}
 //
 // for only getting the src present in each
 // for(let i = 0 ; i<a.length ; i++){

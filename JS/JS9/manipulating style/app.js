@@ -1,13 +1,14 @@
 let img = document.querySelector("img") ;
 console.dir(img.style) ;
 img.style.width = "200px" ; // ye inline change hoga 
-let heading = document.querySelector("h1")
+let heading = document.querySelector("h1") ;
 heading.style.color = "pink" ;
 heading.style.backgroundColor = "orange" ;
 let links = document.querySelectorAll(".box a") ;
+console.dir(links)
 for(list of links){
     list.style.color = "green" ;
-    console.log("changed")
+    console.log("changed") ;
 }
 let box  = document.querySelector(".box");
 console.dir(box.style)

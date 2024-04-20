@@ -16,7 +16,7 @@ img.previousElementSibling.style.color = "pink" ;
 console.dir(b.previousElementSibling) ;
 // below command will change color of h4
 b.previousElementSibling.style.backgroundColor =  "blue" ;
-a.previousElementSibling.style.backgroundColor = "red" ;
+a.previousElementSibling.style.backgroundColor = "red"   ;
 
 
 

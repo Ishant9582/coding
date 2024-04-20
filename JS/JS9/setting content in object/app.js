@@ -6,6 +6,6 @@ console.dir(b.textContent) ; // published by k bad marvel comics show hoga
 a.innerText = "acha"
 
 a.innerHTML = " <u>acha</u> "
-b.innerHTML = ` <u>${b.innerText}</u> ` ;
-b.innerText = "bolo sir" ;
-b.innerHTML =` <b>${b.innerText}</b> `
+// b.innerText = "bolo sir" ;
+b.innerHTML =` <b><u>${b.innerText}</u></b>fir to thik hai `
+//no chnages takes place in fir to theek hai

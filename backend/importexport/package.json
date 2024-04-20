@@ -1,0 +1,22 @@
+{
+  "name": "importexport",
+  "version": "1.0.0",
+  "description": "edfe",
+  "main": "math.js",
+  "scripts": {
+    "test": "edfre"
+  },
+  "repository": {
+    "type": "git",
+    "url": "sddf"
+  },
+  "keywords": [
+    "efd"
+  ],
+  "author": "sdff",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "random-words": "^2.0.1"
+  }
+}
