@@ -5,4 +5,4 @@ p.addEventListener("click" , function(){
 })
 box.addEventListener("mouseenter" , function(){
     console.log("mouse was entered");
-})
+}) ;

@@ -1,7 +1,8 @@
 let url = "https://catfact.ninja/fact" ;
 fetch(url)
 .then((res)=>{
-    return res.json();
+    return res.json();   // to covrt intp readable form
+    
 })
 .then((data1)=>{
     console.log("data 1 = ",data1.fact);

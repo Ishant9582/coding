@@ -10,18 +10,21 @@ function saveto(data){
     });
 };
 let result = saveto("c")
-result.then(()=>{
+result.then((p)=>{
     console.log("promise 1 resolved")
+    console.log(p)
     return saveto("per")
 })
-.then(()=>{
+.then((p)=>{
     console.log("promise 2 resolved ")
+    console.log(p)
     return saveto("buk")
 })
 .then(()=>{
     console.log("promise 3 resolved")
+    console.log(p)
 })
-.catch(()=>{
+.catch((e)=>{
     console.log("promise was rejected")
-   
+    console.log(e)
 })

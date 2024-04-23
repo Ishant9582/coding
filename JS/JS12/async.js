@@ -23,6 +23,7 @@ greet()
 .catch((err)=>{
     console.log("error is found and it is" , err)
 })
+
  // or
  let demo = async() =>{
     return 5;

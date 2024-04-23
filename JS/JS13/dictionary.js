@@ -10,8 +10,8 @@ btn.addEventListener("click" , async ()=>{
     
 })
 function showing(d){
-    let list = document.querySelector(".dictionary")
-    list.innerText = " "
+    
+    
     for(p of d){   
         let e = (p.definitions) ;
         // list.appendChild(li)
@@ -20,6 +20,7 @@ function showing(d){
 }
 function printi(e){
     let list = document.querySelector(".dictionary")
+    list.innerText = " "
     for(z of e){
         let li = document.createElement("li")
         console.log(z.definition)
@@ -31,6 +32,7 @@ function printi(e){
 async function get(word){
     try{
     let res = await axios.get(url+word);
+    console.log(res)
     return ((res.data)[0].meanings)
     }
     catch(e){

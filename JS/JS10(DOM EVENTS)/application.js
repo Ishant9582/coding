@@ -4,13 +4,16 @@ input.addEventListener("keydown" , function(event){
     if(event.code == "KeyU"){
         console.log("object moves forward")
     }
-    if(event.code == "KeyR"){
+    else if(event.code == "KeyR"){
         console.log("object moves right")
     }
-    if(event.code == "KeyL"){
+    else if(event.code == "KeyL"){
         console.log("object moves left")
     }
-    if(event.code == "KeyD"){
+    else if(event.code == "KeyD"){
         console.log("object moves back")
+    }
+    else{
+        console.log("wrong key is pressed")
     }
 })

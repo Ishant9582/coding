@@ -4,19 +4,18 @@ let level = 0
 let started = false;
 let btns = ['red' , 'green','yellow','orange']
 let h3 = document.querySelector("h3")
-document.addEventListener("keypress",function(){
+document.addEventListener("keypress",()=>{
     if(started == false){
-        console.log("game started")
-        started = true ;
-        levelup();
+        console.log("game started")   ;
+        started = true   ;
+        levelup() ;
     }
-    
-    
+                            
 })
 function gameflash(a){
-    a.classList.add("flash")
+    a.classList.add("flash") ;
     setTimeout(function(){
-        a.classList.remove("flash")
+        a.classList.remove("flash") ;
     },250)
     // console.log("flashed")
 } ;
@@ -24,8 +23,8 @@ function userflash(p){
     p.classList.add("userflash")
     setTimeout(function(){
         p.classList.remove("userflash")
-    },250)
-    console.log("flashed")
+    },250);
+    console.log("flashed") ;
 } ;
 
 function levelup(){
@@ -42,6 +41,21 @@ function levelup(){
     gameseq.push(randomcolor) ;
     console.log(gameseq)
     gameflash(randbtn) ;
+}
+let allbtns = document.querySelectorAll(".btn")
+for(btn of allbtns){
+    btn.addEventListener("click",function(){
+        console.log("button was pressed");
+        console.log(this) 
+        let p = (this) ;
+        userflash(p); /////aaaaaaaaaaaaaaaaaa
+        // let p = btn   we cant use it as we dont get desired output
+        usercolor = p.getAttribute("id")
+        console.log(usercolor)
+        
+        userseq.push(usercolor)
+        check(userseq.length-1);
+    })
 }
 function check(idx){
     // index pass ke=rwaya bcoz current element p check krna hai as
@@ -61,21 +75,7 @@ function check(idx){
         reset();
     }
 };
-let allbtns = document.querySelectorAll(".btn")
-for(btn of allbtns){
-    btn.addEventListener("click",function(){
-        console.log("button was pressed");
-        //console.log(this) 
-        let p = (this) ;
-        userflash(p); /////aaaaaaaaaaaaaaaaaa
-        // let p = btn   we cant use it as we dont get desired output
-        usercolor = p.getAttribute("id")
-        console.log(usercolor)
-        
-        userseq.push(usercolor)
-        check(userseq.length-1);
-    })
-}
+
 
 function reset(){
     started = false;

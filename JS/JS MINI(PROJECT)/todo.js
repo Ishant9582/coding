@@ -9,9 +9,9 @@ button.addEventListener("click" , function(){
     dltbtn.innerText = "delete" ;
     item.append("   ") ;
     item.classList.add("border")
-    item.appendChild(dltbtn) ;
-    ul.appendChild(item)
-    inp.value="";
+    item.append(dltbtn) ;
+    ul.append(item)
+    inp.value=" ";
 });
 // let delbtns = document.querySelectorAll(".delete")
 // for(delbtn of delbtns){
@@ -30,6 +30,7 @@ ul.addEventListener("click",function(event){
     console.dir(event.target)
     // yha button.delete krke object ayega bcoz its class is delete
     if(event.target.nodeName == "BUTTON"){
+        console.log(event.target.parentElement)
         let x = event.target.parentElement ;
         x.remove();
         console.log("deleted")

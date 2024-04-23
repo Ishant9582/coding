@@ -15,8 +15,9 @@ img.previousElementSibling.style.color = "pink" ;
 // above command will change clor of spiderman to pink
 console.dir(b.previousElementSibling) ;
 // below command will change color of h4
-b.previousElementSibling.style.backgroundColor =  "blue" ;
-a.previousElementSibling.style.backgroundColor = "red"   ;
+b.previousElementSibling.style.backgroundColor =  "blue"  ;
+a.previousElementSibling.style.backgroundColor = "red"    ;
+a.nextElementSibling.style.backgroundColor = "orange" ;
 
 
 

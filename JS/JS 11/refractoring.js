@@ -18,9 +18,9 @@ colorchange("red",1000)
     return colorchange("green" , 1000);
 })
 .then(()=>{
-    console.log("orange color was completed")
-    return colorchange("purple" , 1000);
+    console.log("purple color was completed") ;
+    return colorchange("purple" , 1000) ;
 })
 .catch(()=>{
-    console.log("error")
+    console.log("error") 
 })

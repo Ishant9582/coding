@@ -9,7 +9,7 @@ button.addEventListener("click",async ()=>{
 async function getimage(){
     try{
         let res = await axios.get(url)
-        // console.log(res)
+        console.log(res)
         return (res.data.message);
        
     }

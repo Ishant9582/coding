@@ -14,12 +14,13 @@ function showing(clgname) {
         console.log(col.name)
         let li =  document.createElement("li");
         li.innerText = col.name ;
-        list.appendChild(li);
+        list.append(li);
     }
 }
 async function getcountry(country){
     try{
     let res = await axios.get(url + country);
+    console.log(res)
     return (res.data);
     }
     catch(e){
