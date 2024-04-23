@@ -17,7 +17,7 @@ const clock = ()=>{
     inputs[3].value = Math.floor((diff)%60) ;
     }
     else{
-        document.querySelector("h3").innerText = "endate and current r same" ;
+        document.querySelector("h3").innerText = "endate and current r same OR END IS ALREADY GONE" ;
     }
 }
 setInterval(clock , 1000) ;
