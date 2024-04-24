@@ -33,8 +33,8 @@ const quizData = [{
 ];
 
 let option = document
-let h2 = document.querySelector("h2")
-let h3 = document.querySelector("h3")
+let h2 = document.querySelector("h1")
+let h3 = document.querySelector("h2")
 
 let btn = document.querySelector("button")
 let g = document.querySelectorAll(".option")

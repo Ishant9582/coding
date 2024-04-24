@@ -1,3 +1,4 @@
+
 body{
     background-color: lightcoral;
 }
@@ -17,15 +18,22 @@ body{
     margin: 20vh;
     background-color: white;
 }
-h2{
+h1{
     padding: 14px;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 8000;
+    font-style: normal; 
+   
 }
-h3{
+h2{
     text-align: center;
-    color: brown;
+    color: brown;     
 }
 .row{
-   
+    font-family: "Jacquard 12 Charted", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
     padding: 14px;
 }
 #submit{
