@@ -14,8 +14,8 @@ body{
 .box{
     /* //background-color: red; */
     border: 1px solid black;
-    width: 40vw;
-    height: 65vh;
+    min-width: 40vw;
+    min-height: 65vh;
     padding: 20px;
     margin: 20vh;
     background-color: white;
@@ -39,7 +39,7 @@ h2{
     padding: 14px;
 }
 #submit{
-    width: 100%;
+    min-width: 100%;
     padding: 5px;
     font-size: 25px;
     border: none;
@@ -52,8 +52,8 @@ h2{
 }
 .new{
     border: 1px solid black;
-    width: 25vw;
-    height: 25vh;
+    min-width: 25vw;
+    min-height: 25vh;
     padding: 20px;
     margin: 20vh;
     background-color: rgb(117, 28, 241);
