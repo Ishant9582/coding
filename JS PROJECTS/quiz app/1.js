@@ -39,6 +39,7 @@ let h3 = document.querySelector("h2")
 let btn = document.querySelector("button")
 let g = document.querySelectorAll(".option")
 let tick = document.querySelectorAll(".ok")
+let div = document.querySelector(".box")
 let correct = 0 ;
 console.dir(tick)
 // console.dir(g)
@@ -94,6 +95,10 @@ function print(){
         btn.remove();
         h2.setAttribute("class" , "center") ;
         h3.remove();
+        // div.setAttribute("id","new");
+        div.classList.add("new")
+        
+        console.dir(div)
     }
     else{
     (h2.innerText) = data.question ;
