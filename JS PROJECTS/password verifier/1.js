@@ -4,9 +4,9 @@ let pass = document.querySelector(".k")
 btn.addEventListener("click" , ()=>{
     let verifyuser = localStorage.getItem("user")
     let passverify = localStorage.getItem("pass")
-    console.log(verifyuser)
-    if((verifyuser.length == 2)){
-        if(passverify.length == 2){
+    
+    if((verifyuser.length == "null")){
+        if(passverify.length == "null"){
             let d = user.value  ;
             let b  = pass.value ;
             localStorage.setItem("pass" , JSON.stringify(b))
@@ -14,12 +14,12 @@ btn.addEventListener("click" , ()=>{
         }
     }
     else{
-            console.log(verifyuser)
+            console.log(verifyuser.length)
             let g = JSON.stringify((user.value))
-            console.log(g)
+            console.log(g.length)
             let d =  JSON.stringify((pass.value))
-            console.log(d)
-            console.log(passverify)
+            console.log(d.length)
+            console.log(passverify.length)
             if((verifyuser == g)){
                 if(passverify == d){
                     user.value = "" ;
