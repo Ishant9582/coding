@@ -4,7 +4,7 @@ let pass = document.querySelector(".k")
 btn.addEventListener("click" , ()=>{
     let verifyuser = localStorage.getItem("user")
     let passverify = localStorage.getItem("pass")
-    console.log(verifyuser.length)
+    console.log(verifyuser)
     if((verifyuser.length == 2)){
         if(passverify.length == 2){
             let d = user.value  ;
