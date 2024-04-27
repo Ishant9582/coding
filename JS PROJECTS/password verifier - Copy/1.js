@@ -13,7 +13,7 @@ btn.addEventListener("click" , ()=>{
             localStorage.setItem("user",JSON.stringify(d))
             user.value = "" ;
             pass.value = "" ;
-            console.log("hello")
+            alert("congo ! details saved successfully")
         }
     }
 
