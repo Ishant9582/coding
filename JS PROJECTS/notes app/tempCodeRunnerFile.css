@@ -1,78 +1,4 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-.main{
-     
-    
-    background-color: lightblue;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-}
-.note{
-    
-    min-width: 35vw;
-    height: 40vh;
-    background-color: #fff;
-    margin: 40px;
-}
-.toolbar{
-    width: 100%;
-    height: 30px;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-.toolbar i{
-    padding: 5px;
-    cursor: pointer;
-}
-.note textarea{
-    border: none;
-    width: 100%;
-    height: 100%;
-    resize: none;
-    padding: 10px;
-    font-size: 20px;
-    background-color: pink;
-}
-.note textarea:focus{
-    border: 0;
-    outline: 0;
-}
-#addbtn{
-    position: fixed;
-    right: 10px;
-    top: 5px;
-   
-    
-    border-radius: 10px;
-    cursor: pointer;
-
-}
-.hidden{
-    display: none;
-}
-.button{
-        position: fixed;
-        display: flex;
-        font-size: 80px;
-        left: 40vw;
-        top: 50vh;
-        background-color: black;
-        color: white;
-        border-radius: 10px;
-        cursor: pointer;
-   
-}
-                  /* for password */
-
-                .okkkk{
+                  .main {
                     background-color: #e0ddea;
                     min-height: 100vh;
                     display: flex;
@@ -105,7 +31,7 @@
                 .k{
                     margin: 5px;
                 }
-                .butto{
+                .button{
                     
                     text-align: center;
                     font-size: 15px;
@@ -113,4 +39,3 @@
                     margin-bottom: 10px; 
                     position: fixed;   
                 }
-
