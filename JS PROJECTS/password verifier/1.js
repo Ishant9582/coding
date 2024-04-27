@@ -5,8 +5,8 @@ btn.addEventListener("click" , ()=>{
     let verifyuser = localStorage.getItem("user")
     let passverify = localStorage.getItem("pass")
     
-    if((verifyuser.length == "null")){
-        if(passverify.length == "null"){
+    if((verifyuser == "null")){
+        if(passverify == "null"){
             let d = user.value  ;
             let b  = pass.value ;
             localStorage.setItem("pass" , JSON.stringify(b))
