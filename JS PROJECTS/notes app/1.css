@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 .main{
+     
+    
     background-color: lightblue;
     width: 100%;
     min-height: 100vh;
@@ -11,7 +13,8 @@
     flex-wrap: wrap;
 }
 .note{
-    min-width: 40vw;
+    
+    min-width: 35vw;
     height: 40vh;
     background-color: #fff;
     margin: 40px;
@@ -46,10 +49,26 @@
     position: fixed;
     right: 10px;
     top: 5px;
-    background-color: black;
-    color: white;
+   
+    
     border-radius: 10px;
     cursor: pointer;
 
 }
+.hidden{
+    display: none;
+}
+.button{
+        position: fixed;
+        display: flex;
+        font-size: 80px;
+        left: 40vw;
+        top: 50vh;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+   
+}
+
 

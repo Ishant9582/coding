@@ -1,0 +1,46 @@
+.{
+    padding: 0px;
+    margin: 0px;
+}
+
+.main {
+    background-color: #e0ddea;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    min-height: 220px;
+    min-width: 500px;
+    height: 50%;
+    background-color: purple;
+    border-radius: 20px;
+}
+.user{
+    text-align: center;
+    margin : 20px;
+    color: red;
+    padding: 10px;
+}
+.pass{
+    text-align: center;
+    margin: 20px;
+    color: rgb(214, 28, 22);
+    padding: 10px;
+}
+.ok{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.k{
+    margin: 5px;
+}
+.button{
+    
+    text-align: center;
+    font-size: 15px;
+    margin-left: 150px;
+    margin-bottom: 10px; 
+    position: fixed;   
+}

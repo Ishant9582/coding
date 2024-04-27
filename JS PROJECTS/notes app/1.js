@@ -1,30 +1,29 @@
+let preview = document.querySelector(".button")
 let btn = document.querySelector("#addbtn")
 let main = document.querySelector(".main")
 btn.addEventListener("click",()=>{
     addnote();
-})
-function addnote(){
-    const note = document.createElement("div")  
+});
+function addnote(text = ""){ // bcoz jb other jgah addnote jb bnda kuch bhejega thodi
+    const note = document.createElement("div")
+    
     note.classList.add("note")
     note.innerHTML = `
     <div class="toolbar">
           <i  class="fa-solid fa-trash"></i>
-          <i  class="save fa-regular fa-floppy-disk" class="save"></i>
+          <i  class="save fa-regular fa-floppy-disk" ></i>
     </div>
-    <textarea></textarea>
-
-    `;
-    
-    // delet();
-    // orrrrrr
+    <textarea>${text}</textarea>
+    ` ;
+    // delet()  ;
+    // orrrrrr  ;
     note.querySelector(".fa-trash").addEventListener(
         "click",()=>{
-            console.log("hello")
-            note.remove()
-            savenotes()
-        }
-        
-    )
+            console.log("hello") ;
+            note.remove() ;
+            savenotes() ;
+        }    
+    )   
 
     note.querySelector(".save").addEventListener(
         "click",()=>{
@@ -33,7 +32,20 @@ function addnote(){
         }
     )
 
- 
+
+preview.addEventListener("click" , ()=>{
+    preview.classList.add("hidden")
+    btn.classList.remove("hidden")
+    main.classList.remove("hidden")
+})
+// for auto save
+
+note.querySelector("textarea").addEventListener(
+    "focusout" , ()=>{
+        savenotes()
+     }
+)
+   
     main.appendChild(note)
     savenotes();
 } 
@@ -50,8 +62,7 @@ function addnote(){
 //             console.log("hello")
 //             let x = (event.target.parentNode.parentElement)
 //             x.remove() ;
-//             // let x = 
-              
+//             // let x =             
 //         }
 //        })
 //     }
@@ -66,13 +77,30 @@ function  savenotes(){
         }
     )
     console.log(data)
-    localStorage.setItem("notes",JSON.stringify(data))
+    if(data.length == 0){
+        localStorage.removeItem("notes")
+    }
+    else{
+        localStorage.setItem("notes",JSON.stringify(data))
+    }
+    
 }
 // self calling function
 (
     function(){
-        const lsnotes = localStorage.getItem("notes") ;
-        console.log(lsnotes)
+        const lsnotes = JSON.parse(localStorage.getItem("notes")) ;
+        if(lsnotes == null){
+            addnote();
+        }
+        else{
+          lsnotes.forEach(
+              (lsnote)=>{   
+                  addnote(lsnote) ;
+              }
+          )
+       }
+
+        
     }
 )()
 
