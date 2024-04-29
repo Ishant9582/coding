@@ -70,6 +70,7 @@ function addnote(text = ""){ // bcoz jb other jgah addnote jb bnda kuch bhejega 
     </div>
     <textarea>${text}</textarea>
     ` ;
+    console.dir(note)
     // delet()  ;
     // orrrrrr  ;
     note.querySelector(".fa-trash").addEventListener(

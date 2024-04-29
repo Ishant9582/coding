@@ -1,6 +1,6 @@
 let capital = "ABCDEFGHIJKLMNOPQRSTUYWXYZ"
 let small = "abcdefghijklmnopqrstuvwxyz"
-let number = "123456789"
+let number = "123456789" 
 let symbol = "!@#$%^&*()" 
 let pass = document.querySelector("#pass-box")
 let upper = document.querySelector("#upper-case")

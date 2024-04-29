@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+body{
+    background-color:#c4c6e7;
+    
+    margin: 0px;
+    padding: 0px;
+}
+
+.whole{
+    background-image: url("https://w0.peakpx.com/wallpaper/553/925/HD-wallpaper-money-collage-country.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+}
+.coll{
+    background-color: grey;
+    position: relative;
+   
+}
+.choose{
+    color: blue;
+    font-size: 40px;
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    padding : 20px
+}
+.input{
+
+    color: rgb(237, 77, 13);
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+}
+.select{
+    font-size: 20px;
+    text-align: center;
+}
+.currency{
+    color: blue;
+    font-size: 40px;
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    padding : 20px
+}
+.selec{
+    font-size: 20px;
+    text-align: center;
+}
+.currenc{
+    color: blue;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    padding : 20px
+    
+}
+.okkk{
+    background-color: grey;
+    padding: 10px;
+}
+.okkkk{
+    background-color: grey;
+    padding: 10px;
+}
+.okk{
+    background-color: grey;
+    padding: 10px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.output table{
+    width: 50vw;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 20px;
+
+}
+.output{
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+table, th, td {
+    border:1px solid black;
+}
+#submit{
+    margin: 30px;
+}
+.loading{
+    display: none;
+}
+.tu{
+    font-size: 80px;
+    color: blue;
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;   
+}
+.head{
+    color: rgb(245, 12, 12);
+}
