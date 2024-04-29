@@ -1,3 +1,4 @@
+
 let loading = document.querySelector(".loading")
 let btn = document.querySelector("#submit").addEventListener("click" , (event)=>{
     event.preventDefault() ;
@@ -9,20 +10,21 @@ let btn = document.querySelector("#submit").addEventListener("click" , (event)=>
     let f = (val.value)
     let cur = (currency.value)
     let curr = currenc.value ;
-    loading.classList.remove("loading")
+    loading.classList.remove("hidden")
     setTimeout(()=>{
         result(f , cur , curr)
-        loading.classList.add("loading")
+        loading.classList.add("hidden")
         
     },500) ;
     
     
 })
 async function result(val,currenc,curr){
-    const tablebody = document.querySelector("tbody");
-    tablebody.innerHTML = ""
+    const boo = document.querySelector(".ok");
+    boo.value = ""
     let d = val ;
     console.log(d)
+    console.dir(boo)
    
     console.log(curr)
     let url  = "https://open.er-api.com/v6/latest/" ;
@@ -32,21 +34,11 @@ async function result(val,currenc,curr){
     for (let key in g) {
         if (g.hasOwnProperty(key)){
             value = g[key];
-            
-
             if(key == curr){
                 console.log(key)
                 console.log(value)
             
-            tablebody.innerHTML += `<tr>
-            <th>currency code</th>
-            <th>Value</th>
-          </tr>
-            <tr>
-            <td>${key}</td>
-            <td>${value*d}</td>  
-          </tr> 
-            
+            boo.value += `${value*d}${key} 
             ` ;
           }
 
