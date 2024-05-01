@@ -1,8 +1,8 @@
-let userseq = [] ;
-let gameseq = [] ;
-let started = false ;
-let level = 0 ;
-let btns = ["red","green","yellow","purple"] ;
+let userseq = [] ;                   
+let gameseq = [] ;          
+let started = false ;            
+let level = 0 ;   
+let btns = ["red","green","yellow","purple"] ; 
 let h3  = document.querySelector("h3") ;
 document.addEventListener("keypress" , ()=>{
     if(started == false){
