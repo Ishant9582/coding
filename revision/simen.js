@@ -10,7 +10,7 @@ document.addEventListener("keypress" , ()=>{
         started = true ;
         levelupp() ;
     }          
-})                
+})          
 function gameflash(a){    
     // console.log(`${a}`)   
     let randbtn = document.querySelector(`.${a}`)    
