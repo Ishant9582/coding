@@ -69,7 +69,9 @@ reset.addEventListener("click",()=>{
         a.innerText = "" 
         a.disabled = false ;  
     } 
-    h2.innerText = ""                
+    h2.innerText = ""  
+    give = true ;  
+    count = 0 ;            
 })
 
 
