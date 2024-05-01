@@ -24,7 +24,7 @@ for(a of boxes){
          //check();
 
          let isWinner = check();
-         console.log(!isWinner)
+         console.log(!isWinner);
          if (count === 9 && !isWinner) {
             gameDraw();
           }
@@ -55,7 +55,8 @@ const showWinner = (winner) => {
 };
 const disableBoxes = () => {
     for (let box of boxes) {
-      box.disabled = true;
+        console.log(box)
+        box.disabled = true;
     }
 };
     
