@@ -16,6 +16,7 @@ result.addEventListener("click",()=>{
 })
 let deleteall = document.querySelector("#clear").addEventListener("click",()=>{
     value.value = "" ;
+    final = "";
 })
 let del = document.querySelector("#clearone").addEventListener("click",()=>{
     console.log(final)

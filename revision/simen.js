@@ -1,25 +1,25 @@
-let userseq = [];
-let gameseq = [];
+let userseq = [] ;
+let gameseq = [] ;
 let started = false ;
 let level = 0 ;
 let btns = ["red","green","yellow","purple"] ;
-let h3  = document.querySelector("h3")
+let h3  = document.querySelector("h3") ;
 document.addEventListener("keypress" , ()=>{
     if(started == false){
-        console.log("game started");
+        console.log("game started") ;
         started = true ;
-        levelupp();
-    }
-})
-function gameflash(a){
-    // console.log(`${a}`)
-    let randbtn = document.querySelector(`.${a}`) 
-    // console.dir(randbtn)
-    randbtn.classList.add("flash")
-    setTimeout(()=>{
-        randbtn.classList.remove("flash")
-    },500)
-
+        levelupp() ;
+    }          
+})                
+function gameflash(a){    
+    // console.log(`${a}`)   
+    let randbtn = document.querySelector(`.${a}`)    
+    // console.dir(randbtn)   
+    randbtn.classList.add("flash")   
+    setTimeout(()=>{    
+        randbtn.classList.remove("flash")   
+    },500)   
+     
 }
 function userflash(b){
     let rand = document.querySelector(`.${b}`) ;
