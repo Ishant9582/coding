@@ -63,11 +63,7 @@ function allbutton(){
     a.forEach((ele)=>{
         ele.classList.add('fa-play-circle');
         ele.classList.remove('fa-pause-circle');
-    })
-
-         
-    
-    
+    })   
 }
 let a = document.querySelectorAll(".songItemPlay")
     for(b of a){
@@ -102,8 +98,7 @@ document.querySelector("#next").addEventListener("click" , ()=>{
         masterSongName.innerText = songs[index].songName ;
         masterPlay.classList.remove("fa-play-circle") ;
         masterPlay.classList.add("fa-pause-circle") ;
-        gif.style.opacity = 1 ;
-        
+        gif.style.opacity = 1 ;   
     }
 
 })
