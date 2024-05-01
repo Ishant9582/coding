@@ -47,6 +47,18 @@ body{
 }
 .btn:focus{
     background-color: blue;
-    font-size: 45px;
-    
+    font-size: 45px;    
+}
+.btn{
+    background-color: lightgreen;
+    color: red;
+}
+h2{
+    background-color: purple;
+    color: bisque;
+}
+h1{
+    font-size: 80px;
+    padding: 20px;
+    margin: 20px;
 }
