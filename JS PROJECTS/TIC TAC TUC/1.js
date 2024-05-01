@@ -31,6 +31,10 @@ function check(){
          if((first!="")&&(third != "")&&(second !="")){
              if((first === second) && (second === third)){
                 h2.innerText = `winner is ${ boxes[pattern[0]].innerText}`
+                for(let a of boxes){    
+                    a.innerText = "" 
+                    a.disabled = false ;  
+                } 
              }
         }
          
