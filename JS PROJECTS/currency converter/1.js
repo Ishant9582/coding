@@ -25,7 +25,6 @@ async function result(val,currenc,curr){
     let d = val ;
     console.log(d)
     console.dir(boo)
-   
     console.log(curr)
     let url  = "https://open.er-api.com/v6/latest/" ;
     let a = await axios.get(url+currenc)
