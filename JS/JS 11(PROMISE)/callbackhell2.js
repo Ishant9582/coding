@@ -36,14 +36,14 @@ function save(success,failure){
     }
     else{
         failure() ;
-    }
-};
+    } 
+} ;
 save(()=>{
     console.log("data 1 saved")
     save(()=>{
         console.log("data 2 saved")
         save(()=>{
-            console.log("dta 3 is saved")
+            console.log("dta 3 is saved");
         },
         ()=>{
             console.log("dta 3 unsaved")

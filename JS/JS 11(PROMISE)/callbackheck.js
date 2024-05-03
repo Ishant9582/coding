@@ -4,7 +4,7 @@ function color(color,delay,nextcolor){
         h1.style.color = color;
         if(nextcolor) nextcolor();
         console.log("changed")
-    },delay)
+    },delay);
 }
 color("red",1000,()=>{
     color("blue",1000,()=>{

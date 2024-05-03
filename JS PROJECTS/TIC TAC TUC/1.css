@@ -5,13 +5,13 @@
 body{
     background-color: #42daacb3;
     text-align: center;
-    padding: 20px ;
-    margin: 20px
+    padding: 15px ;
+    margin: 15px ;
 }
 .container{
     height: 70vh ;
     
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,5 @@ h2{
     color: bisque;
 }
 h1{
-    font-size: 80px;
-    padding: 20px;
-    margin: 20px;
+    font-size: 55px;    
 }
