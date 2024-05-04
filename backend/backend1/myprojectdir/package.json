@@ -1,22 +1,21 @@
 {
-  "name": "myprojectdir",
-  "version": "1.0.0",
-  "description": "helo guys",
+  "name": "ere",
+  "version": "2.0.0",
+  "description": "ddfree",
   "main": "index.js",
   "scripts": {
-    "test": "ed"
+    "test": "efcx"
   },
   "repository": {
     "type": "git",
-    "url": "Ishant9582"
+    "url": "dde"
   },
   "keywords": [
-    "xrd"
+    "sdff"
   ],
-  "author": "Ishant",
+  "author": "fds",
   "license": "ISC",
   "dependencies": {
-    "figlet": "^1.7.0",
-    "give-me-a-joke": "^0.5.1"
+    "figlet": "^1.7.0"
   }
 }
