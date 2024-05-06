@@ -1,0 +1,20 @@
+<%- include("a/head.ejs") %>
+<body>
+    
+    <h1>This page belongs to <%= data.name %></h1>
+    <button>follow</button>
+    <button>message</button>
+    <p> 
+        followers : <%= data.followers %> &nbsp;&nbsp;&nbsp;&nbsp; following : <%= data.following %>
+    </p>
+    <hr>
+    <% for(a of data.posts){ %>
+        <img src="<%= a.image %>" alt="">
+        <p>
+            likes : <%= a.likes %> &nbsp;&nbsp;&nbsp;&nbsp; comments : <%= a.comments %>
+        </p>
+    <% } %>
+    <script src="/app.js"></script>
+</body>
+<%- include("a/footer.ejs") %>
+</html>
