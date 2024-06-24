@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Hey! Welcome to quoro quotes</h1>
+    <% for(let p of posts){ %>
+        <div>
+            <h3>username : @<%= p.username %></h3>
+            <h3>content : <%= p.content %> </h3>
+            <h3>id is : <%= p.id %></h3>
+            <br>
+            <a href="http://localhost:3000/posts/<%= p.id %>">check specific</a>
+            <a href="http://localhost:3000/posts/<%= p.id %>/edit">edit</a>
+            <form method="post" action="/posts/<%=p.id%>?_method=DELETE" >
+              <button>delete post</button>
+            </form>   
+        </div>
+    <% } %>
+    <br>
+    <a href="http://localhost:3000/posts/new">create new post</a>
+</body>
+</html>

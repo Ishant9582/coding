@@ -8,9 +8,9 @@ app.get("/",(req,res)=>{
     res.send("you r in starting");
 })
 app.get("/search",(req,res)=>{
-    console.log(req.query)
+    console.log(req.query) ;
     // let {q}  = (req.query) ;
-    //for receiving 2 request
+    //for receiving 2 request ;
     let {q,name} = req.query ;
     res.send(`search result for query ${q} and name is ${name}`);
 })

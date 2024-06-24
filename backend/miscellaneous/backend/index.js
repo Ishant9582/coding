@@ -13,6 +13,5 @@ app.get("/action",(req,res)=>{
 })
 app.post("/action",(req,res)=>{
     let{username,password} = req.body ;
-
     res.send(`standard post response , welcome ${username} `)
 })

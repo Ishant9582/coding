@@ -3,6 +3,7 @@ function person(name,age){
         name : name ,
         age : age ,
         talk(){
+            console.log(name)
             console.log(`printed ${this.name}`) ;
         },
     }
