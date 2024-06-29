@@ -1,12 +1,12 @@
 function one(){
-    return 1 ;
+    return 2 ;
 }
 function two(){
     return one() + one() 
 }
 function three(){
     let ans = two() + one() ;
-    console.log(ans)
-}
+    console.log(ans) ;
+}  ;
 three() ;
 //source 

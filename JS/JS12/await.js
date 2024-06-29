@@ -11,9 +11,16 @@ function colorchange(color,delay){
     })
 }
 async function demo(){
-    await colorchange("red",1000)
-    await colorchange("blue",1000)
-    await colorchange("green",1000)
-    await colorchange("yellow",1000)
+    let i = 1 ;
+    if(i==1){
+    await colorchange("red",1000) ;
+    await colorchange("blue",1000) ;
+    await colorchange("green",1000) ;
+    await colorchange("yellow",1000) ;
+    }
+    else{
+        await colorchange("pink",1000)
+       
+    }
 }
 demo();

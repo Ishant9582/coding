@@ -6,7 +6,6 @@ user.addEventListener("input",function(event){
     console.log("input changed")    
     console.log(user.value)       // or this.value
     p.innerText = user.value ;
+    p.style.color = "red";
 })
-
-
 

@@ -1,7 +1,9 @@
-let a = [1,2,5,3,7,89,3];
+let a = [1,7,8,3];
 
 let max = a.reduce((a,b)=>{
-    console.log(b)
+
+    console.log(a)
+    //console.log(b)
     if(a<b){
         return b ;
     }

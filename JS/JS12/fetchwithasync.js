@@ -1,5 +1,5 @@
 let url = "https://catfact.ninja/fact" ;
-let urli = "https://catfact.ninja/fact2" ;
+let urli = "https://catfact.ninja/fact2" ; // this is wrong so it give error
 async function getfacts(){
     try{
         let res = await fetch(url) ;

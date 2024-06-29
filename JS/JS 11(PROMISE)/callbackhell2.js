@@ -48,12 +48,12 @@ save(()=>{
         ()=>{
             console.log("dta 3 unsaved")
         }
-    )
+        )
     },
     ()=>{
         console.log("data 2 unsaved")
     }
-)
+    )
 },
 ()=>{
     console.log("data 1 unsaved error is there check net")

@@ -1,5 +1,6 @@
 let  nums = [1,2,3,4,5] ;
 let final = nums.reduce((res,ell)=>{
+    console.log(ell) ;
     console.log(res) ;
     return res+ell ;
 })

@@ -6,9 +6,7 @@ console.dir(btn) ;
 // }
 
 // or
-btn.onclick = function(){ console.log("clicked")};
-   
-
+btn.onclick = function(){ console.log("clicked")}; 
 // for selecting all buttons
 let btns = document.querySelectorAll("button")
 for(btn of btns){
