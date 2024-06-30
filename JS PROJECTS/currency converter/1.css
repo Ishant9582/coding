@@ -58,3 +58,18 @@ body{
    pointer-events: none;
    
 }
+@media only screen and (max-width : 760px)
+{
+   .divide{
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+   } 
+}
+@media only screen and (max-height : 930px)  {
+    .divide{
+        padding: 0px;
+        margin: 0px;
+    }
+}                                                              

@@ -21,6 +21,7 @@ let deleteall = document.querySelector("#clear").addEventListener("click",()=>{
 let del = document.querySelector("#clearone").addEventListener("click",()=>{
     console.log(final)
     final.pop();
+    console.log(final)
     let g = ""
     for(b of final){
         g += b ; 

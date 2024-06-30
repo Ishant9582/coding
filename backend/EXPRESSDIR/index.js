@@ -6,7 +6,7 @@ const app = express();
 let port =  3000 ;
 app.listen(port , ()=>{
     console.log("app is listening on port") ;
-}) ;
+});
 app.get("/",(req,res)=>{
     res.send("hello you r at home")
 })
@@ -32,5 +32,5 @@ app.post("/",(req,res)=>{
 //     b: "hello" ,
 // }
 //     res.send(code) ; // for sending response
-//     //res.send("jello") this will not work as only one response
+//     //res.send("jello") this will not work as only one response for same path and here we already give res.send(code)
 // })
