@@ -22,4 +22,24 @@ const userSc = new mongoose.Schema({
     age : Number ,
 })
 const peep = mongoose.model("peep",userSc) ;
+const user1 = new user({
+    name : "heo" ,
+    email : "jhebgvhgwbjknekl" ,
+    age : 56 ,
+});
+user1.save();
+  //// or /////
+  // or    ///
+  const user2 = new user({
+    name : "eo" ,
+    email : "jh3e3f4f4fekl" ,
+    age : 86 ,
+});
+user2.save()
+.then((res)=>{
+    console.log("success")
+}) 
+.catch((err)=>{
+    console.log("not save")
+})
                     
