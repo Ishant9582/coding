@@ -13,4 +13,4 @@ app.get("/search",(req,res)=>{
     //for receiving 2 request ;
     let {q,name} = req.query ;
     res.send(`search result for query ${q} and name is ${name}`);
-})
+}) 

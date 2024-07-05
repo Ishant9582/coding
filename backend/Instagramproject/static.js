@@ -3,7 +3,8 @@ let app = express()
 let port = 3000 ;
 const path = require("path")
 app.set("view engine","ejs")
-app.use(express.static(path.join(__dirname,"/public/css")))
+// app.use(express.static(path.join(__dirname,"/public/css")))
+app.use(express.static("public/css"))
 app.use(express.static(path.join(__dirname,"/public/js")))
 app.listen(port,()=>{
      console.log("app is listening")

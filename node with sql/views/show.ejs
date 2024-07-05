@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,th,td
+        {
+            border: 1px solid black;    
+        }
+    </style>
+</head>
+<body>
+    <h1>detail of all the users are as follows</h1>
+    <h2><a href="http://localhost:8080">for home</a></h2>
+    <h2><a href="http://localhost:8080/users/new">ADD NEW</a></h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>EMAIL</th>
+            <th>USERNAME</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
+        </tr>
+        
+        <% for(user of users){ %>
+            <tr>
+            <td><%= user.id  %> </td>
+            <td><%= user.email  %> </td>
+            <td><%= user.username   %> </td>
+            <td>
+            <form action="/user/<%= user.id %>/edit ">
+                <button>edit username</button>
+            </form>
+            </td>
+            <td>
+                <form method="post" action="/users/<%=user.id%>?_method=DELETE" >
+                    <button>delete post</button>
+                </form> 
+            </td>
+            </tr>
+        <% } %>  
+        
+    </table>
+</body>
+</html>
