@@ -5,14 +5,13 @@ console.dir(inputs)
 const clock = ()=>{
     const end = new Date(enddate)
     const now = new Date();
-    console.log(now)
+    console.log(now) ;
     //console.log(end,now)
     const diff = (end - now)/1000 ; //result will be in milliseconds so 
     //console.log(diff)
     //divide by 1000 to make in seconds
     //console.log(diff) // 
     //convert into dates
-    
     if(diff>0){
     inputs[0].value = Math.floor((diff/86400)) ;
     inputs[1].value = Math.floor((diff/3600)%24) ;

@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>HEY ! WELCOME TO ALL CHATS</h1>
+    <hr>
+    <a href="http://localhost:8080/chats/new"><button>new</button></a>
+    <br><hr>
+    <% for(chat of chats) { %>
+        <div class="chat">
+            <div>
+                <p><i>from : <%= chat.from %></i></p>
+            </div> 
+            <div class="msg">
+                <p><i><%= chat.message %></i></p>
+                <!-- <a href="http://localhost:8080/chats/<%= chat.id %>/edit"><button>edit</button></a> -->
+                <form action="/chats/<%= chat.id %>/edit">
+                    <button>edit</button>
+                </form>
+            </div>
+            <div>
+                <p><i>to : <%= chat.to %></i></p>
+            </div>
+            <hr>
+            <div>
+                <p><%= chat.date.toString().split(" ")[4] %></p>
+                <p><%= chat.date.toString().split(" ").slice(0,4).join(" ") %></p>
+            </div>
+            <div>
+                <form method="post" action="/chats/<%=chat.id%>?_method=DELETE" >
+                    <button>delete post</button>
+                </form> 
+            </div>
+            
+        </div>
+        <br>
+        <hr>
+        <hr>
+    <% } %>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+    <div class="main">
+    <div class="mainn  flex flex-row justify-center gap-5 flex-wrap">
+           
+                <div class="cardddd max-w-sm    rounded-lg ">
+              
+                    <img class="rounded-t-lg imgggg hh" src= "<%= all.image.url %>"  alt="nt" />
+                
+                <div class="p-5">
+                    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><b><%= all.title %></b></h5>
+                    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= all.description %></p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">&#8377; <%= all.price.toLocaleString("en-IN") %></p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= all.location %></p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= all.country %></p>
+                    
+                </div>
+
+        <a class="aa" href="http://localhost:8080/listings/<%= all.id %>/edit"><button class="btn btn-outline btn-accent">Edit</button></a>
+        &nbsp;
+        <form class="aa" action="/listings/<%= all._id %>?_method=delete" method="post">
+            <button class="btn btn-outline btn-warning">Delete</button>
+        </form>
+        
+    </div>
+     
+</body>

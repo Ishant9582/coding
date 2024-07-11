@@ -1,0 +1,43 @@
+
+.main{
+    margin: 80px ;
+}
+.mainn{
+    margin: 120px 0px 0px 30px ;
+}
+.x{
+    background-color: grey;
+}
+.size{
+     width: 14px;
+     height: 14px;  
+}
+/* card */
+.cardddd{
+    border: none ;
+    margin-bottom: 2rem ;
+}
+.imggg{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    height: 20rem;
+    width: 23rem !important  ;
+    opacity: 1;
+}
+.hh:hover{
+    opacity: 0.6;
+    background-color: white;
+
+}
+.imgggg{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    height: 15rem;
+    width: 23rem !important  ;
+    opacity: 1; 
+}
+.aa{
+    display: inline;
+}
