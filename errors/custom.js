@@ -6,10 +6,12 @@ app.listen(3000,()=>{
 })
 const check = (req,res,next)=>{
     let {token} = req.query ;
+    console.log(token)
     if(token === "give"){
         next()
     }
     throw new expresserr(401,"access denied")
+    // expresserr ko call krrhe custom status and message ko define k lie
 
 }
 app.use("/api" , check , (req,res)=>{
@@ -17,11 +19,15 @@ app.use("/api" , check , (req,res)=>{
 })
 app.get("/err" , (req,res)=>{
    ab = abced ;
-    
+   
+    // isme koi expresserr to throw nhi hua 
+    //to jb hm niche vali p jayenge to isme koi status code nhi to 
+    //usko default value denge niche
 })
 
 app.use((err,req,res,next)=>{
     console.log("------------error---------")
+    //res.send(err)
     //next(err)
     // let {status , message} = err ;
     // for giving default valuues ;

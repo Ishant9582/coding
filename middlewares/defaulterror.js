@@ -9,14 +9,11 @@ app.use("/api",(req,res,next)=>{
         return next() ;
     }
     throw new Error ("access denied") ;
-
 });
 app.get("/api",(req,res)=>{
     
     res.send("access given")
 })
-
 // app.get("/wrong",(req,res)=>{
-    
 //     a = pqrsd ;
 // })

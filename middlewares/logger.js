@@ -5,18 +5,13 @@ app.listen(3000,()=>{
 })
 app.use((req,res,next)=>{
     //console.log(req)
-    req.time = Date.now( ) ;
+    req.time = new Date() ;
     console.log(req.method , req.hostname , req.path , req.time)
-    return next() ;
-   
+    return next() ; 
 })
-
 app.get("/",(req,res)=>{
-    
     res.send("he;;p")
 })
-
 app.get("/liu",(req,res)=>{
-    
     res.send(";;;;;;;;;;;p")
-})
+}) 

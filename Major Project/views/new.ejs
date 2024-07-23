@@ -1,51 +1,101 @@
 <% layout('/layouts/boilerplate') -%>
-<body>
-    <div class="main">
-
-    <form action="http://localhost:8080/listings/ok" method="post">
-    <div class="relative z-0 w-full mb-5 group">
-        <input type="title"  name="Listing[title]"  placeholder="" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" required />
-        <label for="Title" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Title</label>
-    </div>
-    <div class="relative z-0 w-full mb-5 group">
-        <input name="Listing[description]" type="description" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-        <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Description</label>
-    </div>
-    <div class="relative z-0 w-full mb-5 group">
-        <input type="text" name="Listing[image]" id="floating_repeat_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-        <label for="floating_repeat_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image Url</label>
-    </div>
-    <div class="grid md:grid-cols-2 md:gap-6">
-      <div class="relative z-0 w-full mb-5 group">
-          <input type="text" name="Listing[price]" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-          <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Price</label>
+<body class=" bg-gray-100 p-8">
+  <div class=" max-w-lg mx-auto bg-white p-6 rounded shadow-md ">
+    <div class=" mainnn">
+    <form action="http://localhost:8080/listings/ok" method="post" id="listingForm">
+      <div class="mb-4">
+        <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
+        <input type="title" required  name="Listing[title]" id="title" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+        <p id="titleError" class="mt-2 text-sm text-red-600 hidden">Please enter a catchy title.</p>
       </div>
-      <div class="relative z-0 w-full mb-5 group">
-          <input type="text" name="Listing[location]" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-          <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Location</label>
+      <div class="mb-4">
+        <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+        <input name="Listing[description]" required   type="description" id="description"  class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+        <p id="descriptionError" class="mt-2 text-sm text-red-600 hidden">Please enter a short description.</p>
       </div>
-    </div>
-    <div class="grid md:grid-cols-2 md:gap-6">
-      <div class="relative z-0 w-full mb-5 group">
-          <input type="text" name="Listing[country]" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-          <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Country</label>
+      <div class="mb-4">
+        <label for="imageLink" class="block text-sm font-medium text-gray-700">Image Link</label>
+        <input type="text" name="Listing[image][url]"  required id="imageLink"  class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+        <p id="imageLinkError" class="mt-2 text-sm text-red-600 hidden">Please enter a valid URL.</p>
       </div>
-    </div>
-    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-  
-  
-        <!-- <input type="title"  name="Listing[title]"  placeholder="title">
-        <br>
-        <textarea name="Listing[description]" id="" placeholder="desciption"></textarea>
-        <br>
-        <input type="text" name="Listing[image]" placeholder="image link">
-        <br>
-        <input type="text" name="Listing[price]" placeholder="price">
-        <br>
-        <input type="text" name="Listing[location]" placeholder="location">
-        <br>
-        <input type="text" name="Listing[country]" placeholder="country">
-        <button>submit</button> -->
+      <div class="mb-4">
+        <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
+        <input type="" id="price" required name="Listing[price]" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+        <p id="priceError" class="mt-2 text-sm text-red-600 hidden">Please enter a valid price.</p>
+      </div>
+      <div class="mb-4">
+        <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
+        <input type="text" required id="country" name="Listing[country]" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+        <p id="countryError" class="mt-2 text-sm text-red-600 hidden">Please enter a valid country name.</p>
+      </div>
+      <div class="mb-4">
+        <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
+        <input type="text" required id="location" name="Listing[location]"  class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+        <p id="locationError" class="mt-2 text-sm text-red-600 hidden">Please enter a valid location.</p>
+      </div>
+      <button  onclick="validateForm()" class="bg-blue-500 text-white px-4 py-2 rounded-md">Add</button>
+     
     </form>
+  </div>
 </div>
+
+  <script>
+    function validateForm() {
+      // Reset previous errors
+      const errorElements = document.querySelectorAll('.text-red-600');
+      errorElements.forEach(el => el.classList.add('hidden'));
+
+      let isValid = true;
+
+      // Title validation
+      const title = document.getElementById('title').value;
+      if (!title) {
+        document.getElementById('titleError').classList.remove('hidden');
+        isValid = false;
+      }
+
+      // Description validation
+      const description = document.getElementById('description').value;
+      if (!description) {
+        document.getElementById('descriptionError').classList.remove('hidden');
+        isValid = false;
+      }
+
+      // Image Link validation
+      const imageLink = document.getElementById('imageLink').value;
+      if (!imageLink) {
+        document.getElementById('imageLinkError').classList.remove('hidden');
+        isValid = false;
+      }
+
+      // Price validation
+      const price = document.getElementById('price').value;
+      if (!price || isNaN(price) || price <= 0) {
+        document.getElementById('priceError').classList.remove('hidden');
+        isValid = false;
+      }
+
+      // Country validation
+      const country = document.getElementById('country').value;
+      if (!country) {
+        document.getElementById('countryError').classList.remove('hidden');
+        isValid = false;
+      }
+
+      // Location validation
+      const location = document.getElementById('location').value;
+      if (!location) {
+        document.getElementById('locationError').classList.remove('hidden');
+        isValid = false;
+      }
+
+      // If the form is valid, submit it
+    //   if (isValid) {
+    //     // Form submission logic here
+    //     alert('Form is valid and ready to be submitted!');
+    //   }
+    }
+  </script>
 </body>
+</html>
+

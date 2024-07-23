@@ -76,6 +76,19 @@ app.post("/chats/k" , asyncwrap(async(req,res,next)=>{
         res.redirect("/chats")
 
 }))
+// defining asyncwrap function
+
+//
+function asyncwrap(fn){
+    return function(req,res,next){
+        fn(req,res,next).catch((err)=>next(err));
+        //for sendind customise
+        //fn(req,res,next).catch((err)=>next(new expresserr(401 , "chat not found")));
+    }
+}
+//
+//
+//
 app.get("/chats/:id/:edit" ,async (req,res)=>{
     let {id} = req.params ;
     //console.log(id) ;
@@ -84,17 +97,7 @@ app.get("/chats/:id/:edit" ,async (req,res)=>{
     res.render("edit.ejs",{data})
 });
 
-// defining asyncwrap function
 
-//
-function asyncwrap(fn){
-    return function(req,res,next){
-        fn(req,res,next).catch((err)=>next(err));
-    }
-}
-//
-//
-//
 app.put("/chats/:id" , async (req,res)=>{
       let {message : msg} = req.body ;
       let {id} = req.params ;

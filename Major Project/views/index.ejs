@@ -1,20 +1,24 @@
 <% layout('/layouts/boilerplate') -%>
-<body>
-    <div class="mainn  flex flex-row justify-center gap-5 flex-wrap">
-    <% for(a of all){ %>
-        <a href="http://localhost:8080/listings/<%= a._id %>">
-            <div class="cardddd max-w-sm    rounded-lg ">
-          
-                <img class="rounded-t-lg imggg hh" src= "<%= a.image.url %>"  alt="nt" />
-            
-            <div class="p-5">
-                
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><b><%= a.title %></b></h5>
-                
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">&#8377;<%= a.price %>/Night</p>
-            </div>
-                  
-        </a>      
-    <% } %>  
-</div> 
-</body>
+
+    <body>
+        <div class="mainn flex flex-row justify-center gap-5 flex-wrap">
+            <% for(a of all){ %>
+                <a href="http://localhost:8080/listings/<%= a._id %>">
+                    <div class="max-w-sm rounded-lg cardddd">
+
+                        <img class="rounded-t-lg imggg hh" src="<%= a.image.url %>" alt="nt" />
+
+                        <div class="p-5">
+
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><b>
+                                    <%= a.title %>
+                                </b></h5>
+
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">&#8377;<%= a.price %>/Night</p>
+
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+        </div>
+    </body>
