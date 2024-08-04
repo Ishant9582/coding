@@ -1,6 +1,5 @@
-
 const mongoose = require("mongoose");
-const initData = require("./data.js");
+let initData = require("./data.js");
 const Listing = require("../models/listing.js");
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 main()
@@ -13,11 +12,13 @@ main()
 async function main() {
   await mongoose.connect(MONGO_URL);
 }
-
-const initDB = async () => {
+let initDB = async () => {
   await Listing.deleteMany({});
+  initData = initData.map((obj)=>({
+    ...obj , 
+    owner : ['66ac6b2c1c062fc257b832e2'] ,
+  }));
   await Listing.insertMany(initData);
   console.log("data was initialized");
 };
-
 initDB();

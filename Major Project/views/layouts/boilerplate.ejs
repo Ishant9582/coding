@@ -7,19 +7,24 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"  rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/css/style.css">
-   
+    <link rel="stylesheet" href="/css/stars.css">
 </head>
-<body>
+<body class="min-h-screen">
     <%- include("../includes/navbar.ejs") %>
+    <div class="mainnn">
+    <%- include("../includes/flash.ejs") %>
+    </div>
     <div class="container">
         <%- body %>
     </div>
-    <footer>
-    <%- include("../includes/footer.ejs") %>
-    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     <script src="https://kit.fontawesome.com/0b7fceb009.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/java/music.js"></script>
+    <!-- <script src="/java/music.js"></script> -->
+    <footer>
+        <%- include("../includes/footer.ejs") %>
+    </footer>
 </body>
+
 </html>

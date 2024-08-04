@@ -8,6 +8,9 @@
 .mainnn{
     margin: 80px 0px 0px 30px ;
 }
+/* .mainnn{
+    margin: 60px 0px 0px 30px ;
+} */
 .x{
     background-color: grey;
 }
@@ -42,4 +45,7 @@
 }
 .aa{
     display: inline;
+}
+.info{
+    display : none ;
 }
