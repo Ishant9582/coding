@@ -1,22 +1,44 @@
 <% layout('/layouts/boilerplate') -%>
-<body class="mainn">
+<body class="bg-gray-100 text-gray-800">
 
-   <p> Welcome to Hotels ! </p>
+    <!-- Hero Section -->
+    <section id="home" class="bg-cover bg-center h-screen" style="background-image: url('https://source.unsplash.com/featured/?nature');">
+        <div class="h-full flex flex-col justify-center items-center bg-black bg-opacity-50">
+            <h2 class="text-5xl font-extrabold text-white mb-6 text-center animate-fadeIn">Welcome to Hotels</h2>
+            <p class="text-xl text-white mb-10 text-center animate-fadeIn delay-200">Explore The Beautiful Hotels</p>
+            <a href="#services" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">Learn More</a>
+        </div>
+    </section>
 
-<p>Thank you for choosing Hotels for your travel and accommodation needs. We’re excited to help you find the perfect stay for your journey. Whether you’re traveling for business, leisure, or a special occasion, our app is here to ensure you have a seamless and enjoyable experience.</p>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">About Us</h2>
+            <p class="text-lg leading-relaxed text-gray-600">We are a team of dedicated professionals committed to delivering top-quality services to our clients. Our mission is to help you achieve your goals with innovative solutions.</p>
+        </div>
+    </section>
 
-<p>What to Expect: </p>
- </p>
-<p>Easy Booking: Browse and book from a wide range of hotels with just a few taps. </p>
-<p>Exclusive Offers: Unlock special discounts and deals available only on our app. </p>
-<p>24/7 Support: Our customer service team is always here to assist you with any questions or concerns. </p>
-<p>Get Started: </p>
-<p>Explore top-rated hotels in your destination. </p>
-<p>Check out our featured deals for extra savings. </p>
-<p>Manage your bookings effortlessly in the app. </p>
-<p>We hope you have a wonderful stay and a memorable trip! </p>
-<br><br>
-<p>Warm regards,</p>
-<br>
-<p>The Hotels Team</p>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4">Service 1</h3>
+                    <p class="text-gray-600">Create your own listings</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4">Service 2</h3>
+                    <p class="text-gray-600">Make changes in your listings</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4">Service 3</h3>
+                    <p class="text-gray-600">Add reviews in your as well as in others listings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </body>
+

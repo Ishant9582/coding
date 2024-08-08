@@ -1,7 +1,4 @@
 const Listing = require("../models/listing.js");
-module.exports.home = (req, res) => {
-    res.render("home.ejs")
-};
 
 // show all listing
 module.exports.show = async (req, res) => {
@@ -25,7 +22,8 @@ module.exports.new = async (req, res, next) => {
     //console.log(req.user._id)
     a.image = { url, filename };
     a.owner.push(req.user._id);
-    a.owner.push('66ac6b491c062fc257b832ea')
+    a.owner.push('66b05d06aaf7732cabd73873')
+    a.owner.push('66afe3b1da64cc49e3ec1aa9')
     await a.save();
     req.flash("success", "new listing created successfully")
     res.redirect("/listings");

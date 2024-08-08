@@ -21,7 +21,7 @@ function validatelisting(req,res,next){
     }
 }
 // home route
-router.get("/home/h" , listingcontroller.home)
+
 ////
 // show
 router.get("/" ,wrapasync(listingcontroller.show))

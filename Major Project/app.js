@@ -1,7 +1,6 @@
 if(process.env.NODE_ENV != "production"){
     require("dotenv").config() ;
 }
-
 const express = require("express") ;
 const app = express();
 const mongoose = require('mongoose');
@@ -21,6 +20,9 @@ const listings = require("./routes/listing.js") ;
 const reviews = require("./routes/review.js") ;
 const users = require("./routes/user.js")
 
+// mongo-store
+const MongoStore = require('connect-mongo')
+
 
 ////////for password settlement /////
 
@@ -33,20 +35,32 @@ main()
 })
 .catch((err) => console.log(err));
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/wanderlust');
+  await mongoose.connect(process.env.ATLAS_URI);
 }
-const sessionOptions = {
-    secret : "supersecret" , 
-    // AGR NICHE VALE 2 USE NHI KIE TO WARNING AAYEGI
-    resave : "false" , 
-    saveUninitialized : true ,
+// const sessionOptions = {
+//     secret : "yoursecretkey" , 
+//     // AGR NICHE VALE 2 USE NHI KIE TO WARNING AAYEGI
+//     resave : "false" , 
+//     saveUninitialized : true ,
+//     store : MongoStore.create({mongUrl : "mongodb+srv://ishant135:6S5BWVgGeAob7JtA@hotelsia.uox0mi8.mongodb.net/wanderlust"}) ,
+//     cookie : {
+//         expires : Date.now() + 7*24*60*60*1000 ,
+//         maxAge : 7*24*60*60*1000 ,
+//         httponly : true ,
+//     }
+// }
+// app.use(session(sessionOptions));
+app.use(session({
+    secret: 'yourSecretKey',
+    resave: false,
+    saveUninitialized: true,
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://ishant135:6S5BWVgGeAob7JtA@hotelsia.uox0mi8.mongodb.net/wanderlust'}) ,
     cookie : {
         expires : Date.now() + 7*24*60*60*1000 ,
         maxAge : 7*24*60*60*1000 ,
         httponly : true ,
     }
-}
-app.use(session(sessionOptions));
+}));
 app.use(flash()) ;
 
 // initializing passport
@@ -74,7 +88,9 @@ app.use("/", users)
 app.listen(8080,()=>{
     console.log("app listening")
 })
-
+app.get("/",(req,res)=>{
+    res.render("home.ejs")
+})
 
 
 // error handling

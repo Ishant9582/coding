@@ -4,7 +4,7 @@ module.exports.issignedin = (req, res, next) => {
     if (!req.isAuthenticated()) {
         //console.log(req.originalUrl)
         req.session.redirectUrl = req.originalUrl;
-        req.flash("error", "please login in first")
+        req.flash("error", "please log in  first")
         return res.redirect("/login")
     }
     next();
@@ -17,15 +17,15 @@ module.exports.saveredirecturl = (req, res, next) => {
 }
 
 //
-module.exports.isowner = async (req, res, next) => {
-    let { id , revid } = req.params;
-    let review = await Review.findById(revid)
-    if (!Review.author.equals(res.locals.userdata._id)) {
-        req.flash("error", "You Are Not Author Of This")
-        return res.redirect(`/listings/${id}`)       
-    }
-    next();
-}
+// module.exports.isowner = async (req, res, next) => {
+//     let { id , revid } = req.params;
+//     let review = await Review.findById(revid)
+//     if (!Review.author.equals(res.locals.userdata._id)) {
+//         req.flash("error", "You Are Not Author Of This")
+//         return res.redirect(`/listings/${id}`)       
+//     }
+//     next();
+// }
 
 
 module.exports.isowner = async (req, res, next) => {
