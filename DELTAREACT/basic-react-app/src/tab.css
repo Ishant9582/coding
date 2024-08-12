@@ -1,6 +1,9 @@
 .tab{
     border: 1px solid black ;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    padding: 0px 10px 0 10px;
+    margin-left  : 20 px ;
+    height : 200px ;
+    width : 250px ;
 }

@@ -1,5 +1,5 @@
 import  './App.css'
-// import Titlee from "./des.jsx"
+import Titlee from "./des.jsx"
 // function Title() {
 //   return <h1>hello world</h1>
 // }
@@ -13,13 +13,17 @@ import  './App.css'
 //     </div>
 //   );
 // }
-import Producttab from './producttab';
+// import Producttab from './producttab.jsx';
+// import User from './usertab.jsx'
+import Amazon from './amazon.jsx';
 
 function App() {
   return (
-    <div>
-      <Producttab/>
-    </div>
+    <>
+      {/* <User username="sh" textcolor = "blue"/>
+      <Producttab/> */}
+      <Amazon/>
+    </>
   );
 }
 export default App

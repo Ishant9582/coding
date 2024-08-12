@@ -5,7 +5,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>,
    // due to React.strictMode console k andar cheeje twice print hoti 
 )
