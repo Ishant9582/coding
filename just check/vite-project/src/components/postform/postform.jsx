@@ -25,9 +25,9 @@ export default function PostForm({ post }) {
     const userData = useSelector((state) => state.auth.userData);
 
     const submit = async (data) => {
+        console.log(data)
         console.log("handlesubmit clicked")
         if (post) {
-            console.log("post is absent")
             const file = data.image[0] ? await uploadfile(data.image[0]) : null;
             console.log(post.image)
             if (file) {
@@ -46,9 +46,15 @@ export default function PostForm({ post }) {
                 navigate(`/post/${post.$id}`);
             // }
         } else {
-          console.log("post is aseny")
+
+            // for adding post
+          console.log("post is absent")
+          console.log(data.image)
+          console.log(data.image[0])  // file info name and all that stuf
+          // uploading image in bucket
             const file = await uploadfile(data.image[0]);
             console.log(file)
+            // info about file
             if (file) {
                 console.log("file found")
                 const fileId = file.$id;
@@ -76,12 +82,20 @@ export default function PostForm({ post }) {
     }, []);
 
     useEffect(() => {
+        // subscription watch the changes in form input including their value and name values using function watch 
         const subscription = watch((value, { name }) => {
-            if (name === "Title") {
+            if (name === "Title") 
+                // checking if changed form input is with the name of Title
+                {
+                // updates the value of a form field updates form field with name slug to a new derived value from title field
+                //console.log(value)
                 setValue("slug", slugTransform(value.Title), { shouldValidate: true });
+                // slugtransform upr function usko call lgri yha 
+                // form should be re-validated after value is set
             }
         });
         return () => subscription.unsubscribe();
+        // subscription to form changes is properlly cleaned up to avoid memory leak 
     }, [watch, slugTransform, setValue]);
 
     return (
@@ -99,6 +113,7 @@ export default function PostForm({ post }) {
                     className="mb-4"
                     {...register("slug", { required: true })}
                     onInput={(e) => {
+                        console.log(e)
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
                     }}
                 />

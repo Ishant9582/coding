@@ -31,17 +31,17 @@ export  async function login({email,password}){
     }
 }
 
-// export  async function getcurrentuser(){
+export  async function getcurrentuser(){
    
-//     try{
+    try{
        
-//         return await account.get()
-//     }catch(err){
+        return await account.get()
+    }catch(err){
        
-//         console.log("appwrite service :err",err) ;
-//     }
-//     return null ;
-// }
+        console.log("appwrite service :err",err) ;
+    }
+    return null ;
+}
 export  async function Logout(){
     try{
         await account.deleteSessions() ;

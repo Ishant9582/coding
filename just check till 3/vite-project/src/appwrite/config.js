@@ -14,6 +14,7 @@ export const bucket = new Storage(client)
 // create
 export async function  createPost({Title , slug , content , image,status,userid}){
     try{
+        console.log(slug)
              return await databases.createDocument(
                 conf.appwriteDatabaseId ,
                 conf.appwriteCollectionId,

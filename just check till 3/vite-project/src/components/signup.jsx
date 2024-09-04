@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { login } from "../store/authslice"
 import { Input} from "./index.js"
 import { useDispatch } from "react-redux";
-import {getcurrentuser} from "../appwrite/auth"
+import {fetchUserData} from "../appwrite/auth"
 import {createaccount} from "../appwrite/auth"
 import { useForm } from "react-hook-form"
 
@@ -14,12 +14,18 @@ function Signup() {
     const {register, handleSubmit} = useForm()
 
     const create = async(data) => {
+       
+        // data ke naam p yha pr object aaya hai jisme hai name , password and email
         setError("")
         try {
             const userData = await createaccount(data)
-            if (userData) {
-                const userData = await getcurrentuser()
-                if(userData) dispatch(login(userData));
+            // creating account with that data
+            if (userData){
+                const userData = await fetchUserData()
+                // getting userdata if it is present 
+            
+                if(userData) dispatch(login({userData}));
+                // sending data to slice so that status is changes and also value go there
                 navigate("/")
             }
         } catch (error) {
@@ -31,7 +37,7 @@ function Signup() {
             <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
             <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
-                        <h1>logo</h1>
+                        <h1></h1>
                     </span>
                 </div>
                 <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>
@@ -44,6 +50,8 @@ function Signup() {
                         Sign In
                     </Link>
                 </p>
+
+                {/* // agr error hua to and k bad vali line will execute */}
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
                 <form onSubmit={handleSubmit(create)}>
@@ -52,6 +60,7 @@ function Signup() {
                         label="Full Name: "
                         placeholder="Enter your full name"
                         {...register("name", {
+                            // yha p vo name jo hmare database m hai
                             required: true,
                         })}
                         />

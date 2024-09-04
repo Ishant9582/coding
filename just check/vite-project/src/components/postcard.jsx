@@ -1,5 +1,4 @@
 import React from "react";
-import {getfilepreview} from "../appwrite/config"
 import {Link} from "react-router-dom"
 import ImageGallery from './image'
 function PostCard({$id, Title, image}) {
@@ -8,7 +7,7 @@ function PostCard({$id, Title, image}) {
           <div className='w-full bg-gray-100 rounded-xl p-4'>
               <div className='w-full justify-center mb-4'>
                   
-              <ImageGallery imageName={image} />
+              <ImageGallery image={image} />
               </div>
               <h2
               className='text-xl font-bold'

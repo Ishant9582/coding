@@ -18,7 +18,7 @@ export async function  createPost({Title , slug , content , image,status,userid}
              return await databases.createDocument(
                 conf.appwriteDatabaseId ,
                 conf.appwriteCollectionId,
-                slug,
+                slug,  // unique id given to post with which we access it
                 {
                     Title ,
                     content ,
@@ -131,40 +131,16 @@ export async function deleteFile(fileId){
     }
 }
 
-// for viewing file
-// ye ek k lie shi but not foe all posts 
-export async function getfilepreview(slug) {
-        try {
-            // Fetch the URL of the image
-            const url = await bucket.getFileView(conf.appwriteBucketId , slug);
-            console.log(slug)
-            console.log(url); // Success: URL to the image
-            
-            // Assuming you have an <img> tag with id 'image-container'
-            document.getElementsByClassName('image-container').src = url.href;
-        } catch (error) {
-            console.log(error); // Failure
-        }
-}
+export async function fetchImage(image){
+    try {
+        // Replace 'bucketID' with your actual bucket ID
+        const result = await bucket.getFilePreview(conf.appwriteBucketId, image);
 
-// export async function fetchAndDisplayImages([]) {
-//     try {
-//         const imageListContainer = document.getElementById('image-list');
-
-//         // Loop through each file ID and fetch the image
-//         for (const fileId of fileIds) {
-//             const fileView = await storage.getFileView(bucketId, fileId);
-
-//             // Create an <img> element and set its src attribute to the file URL
-//             const imgElement = document.createElement('img');
-//             imgElement.src = fileView.href;
-//             imgElement.alt = `Image with ID ${fileId}`;
-//             imgElement.style.width = '200px'; // Set width, you can adjust this
-
-//             // Append the image to the container
-//             imageListContainer.appendChild(imgElement);
-//         }
-//     } catch (error) {
-//         console.error('Error fetching images:', error);
-//     }
-// }
+        // Create URL to access the image
+        const imageURL = result.href;
+        return imageURL ;
+        
+    } catch (error) {
+        console.error("Error fetching the image: ", error);
+    }
+};

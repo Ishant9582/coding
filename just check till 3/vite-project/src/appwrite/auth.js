@@ -10,6 +10,7 @@ export  async function createaccount({email,password,name}){
         const useraccount = await account.create
         (ID.unique() , email , password , name);
         if(useraccount){
+            // agr user ne login kr hi dia to usko login bhi krwa do and directly login k baad vale page p pohucha do
             return login({email,password})
         }
         else{
@@ -23,11 +24,9 @@ export  async function createaccount({email,password,name}){
 
 export  async function login({email,password}){
     try{
-        console.log("hello")
         return await account.createEmailPasswordSession(email,password);
 
     }catch(err){
-        console.log("yellu")
         throw err ;
     }
 }
@@ -57,31 +56,30 @@ export  async function Logout(){
 export async function fetchUserData() {
     try {
       const userData = await account.get();
-      console.log(userData); // Check the fetched data
+    //   console.log(userData); // Check the fetched data
       return userData;
     } catch (error) {
       console.error("Failed to fetch user data:", error);
     }
   }
 
-  export const updateUserData = async (newUsername, newEmail) => {
-    const databaseId = 'conf.appwriteDatabaseId';    // Replace with your database ID
-    const collectionId = 'conf.appwriteCollectionId';  // Replace with your collection ID
-    const documentId = '[DOCUMENT_ID]';   // Replace with the document (user) ID you want to update
+//   export const updateUserData = async (newUsername, newEmail) => {
+//     const databaseId = 'conf.appwriteDatabaseId';    // Replace with your database ID
+//     const collectionId = 'conf.appwriteCollectionId';  // Replace with your collection ID
+//     const documentId = '[DOCUMENT_ID]';   // Replace with the document (user) ID you want to update
   
-    try {
-      const response = await account.updateDocument(
-        databaseId,
-        collectionId,
-        documentId,
-        {
-          username: newUsername,
-          
-          email: newEmail,
-        }
-      );
-      return response;
-    } catch (error) {
-      throw new Error("Failed to update user");
-    }
-  };
+//     try {
+//       const response = await account.updateDocument(
+//         databaseId ,
+//         collectionId ,
+//         documentId ,
+//         {
+//           username: newUsername ,   
+//           email: newEmail ,
+//         }
+//       );
+//       return response;
+//     } catch (error) {
+//       throw new Error("Failed to update user");
+//     }
+//   };

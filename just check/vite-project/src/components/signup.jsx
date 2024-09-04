@@ -20,11 +20,11 @@ function Signup() {
         try {
             const userData = await createaccount(data)
             // creating account with that data
-            if (userData) {
+            if (userData){
                 const userData = await fetchUserData()
                 // getting userdata if it is present 
-                console.log(userData)
-                if(userData) dispatch(login(userData));
+            
+                if(userData) dispatch(login({userData}));
                 // sending data to slice so that status is changes and also value go there
                 navigate("/")
             }
@@ -50,6 +50,8 @@ function Signup() {
                         Sign In
                     </Link>
                 </p>
+
+                {/* // agr error hua to and k bad vali line will execute */}
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
                 <form onSubmit={handleSubmit(create)}>

@@ -53,7 +53,6 @@ export default function PostForm({ post }) {
                 console.log("file found")
                 const fileId = file.$id;
                 data.image = fileId;
-              
                 const dbPost = await createPost({ ...data, userid: userData.$id });
                 console.log(dbPost)
 
@@ -82,7 +81,6 @@ export default function PostForm({ post }) {
                 setValue("slug", slugTransform(value.Title), { shouldValidate: true });
             }
         });
-
         return () => subscription.unsubscribe();
     }, [watch, slugTransform, setValue]);
 
@@ -91,8 +89,8 @@ export default function PostForm({ post }) {
             <div className="w-2/3 px-2">
                 <Input
                     label="Title :"
-                    placeholder="Title"
-                    className="mb-4"
+                    placeholder="Title" 
+                    className="mb-4" 
                     {...register("Title", { required: true })}
                 />
                 <Input

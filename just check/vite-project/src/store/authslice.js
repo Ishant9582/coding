@@ -12,6 +12,8 @@ const authSlice = createSlice({
         login : (state,action)=>{
             state.status = true ;
             state.userData = action.payload.userData ;
+           
+            // console.log(state.userData)
         } ,
         logout : (state)=>{
             state.status = false ;
@@ -23,4 +25,6 @@ const authSlice = createSlice({
 
 
 export const {login , logout} = authSlice.actions
-export default authSlice.reducer 
+
+// reducer hi likhna bcoz vhi likhna hota
+export default authSlice.reducer

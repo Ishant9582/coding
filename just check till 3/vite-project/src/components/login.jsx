@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { login as authlogin } from "../store/authslice"
 import {Input} from "./index"
 import { useDispatch } from "react-redux";
-import {getcurrentuser} from "../appwrite/auth"
+import {fetchUserData} from "../appwrite/auth"
 import {login} from "../appwrite/auth"
 import { useForm } from "react-hook-form"
 
@@ -18,8 +18,9 @@ function Login() {
         try {
             const session = await login(data)
             if (session) {
-                const userdata = await getcurrentuser()
-                if (userdata) dispatch(authlogin(userdata))
+                const userData = await fetchUserData()
+                // userData ki spelling vhi likho jo authslice m likhi hai
+                if (userData) dispatch(authlogin({userData}))
                     navigate("/")
             }
         }
@@ -44,7 +45,10 @@ function Login() {
                         Sign up
                     </Link>
                 </p>
+
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
+
+
                 <form onSubmit={handleSubmit(loginn)} className="mt-8">
                     <div className="space-y-5">
                         <Input
