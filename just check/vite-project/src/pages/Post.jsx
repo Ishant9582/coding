@@ -109,7 +109,7 @@ export default function Post() {
             </svg>
             <span className="sr-only">Info</span>
             <div className="ms-3 text-sm font-medium">
-              You need to be an author or an admin to perform deletion or updating.
+              You need to be an author or an admin to perform deletion or updation.
             </div>
             <button
               type="button"
