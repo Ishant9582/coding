@@ -1,6 +1,8 @@
-// appwriteFunctions.js
+// src/utils/appwriteUtils.js
+
 import { Client, Databases, ID } from 'appwrite';
 import conf from '../conf/conf';
+import { getPost } from '../appwrite/config';
 
 // Initialize the Appwrite client and databases
 const client = new Client();
@@ -8,7 +10,8 @@ const databases = new Databases(client);
 
 client.setEndpoint(conf.appwriteUrl).setProject(conf.appwriteProjectId);
 
-export const addCommentToPost = async (postId, commentData, user) => {
+// Function to add a comment
+export const addComment = async (postId, commentText, user) => {
   try {
     // Step 1: Create the comment in the comments collection
     const commentResponse = await databases.createDocument(
@@ -17,8 +20,9 @@ export const addCommentToPost = async (postId, commentData, user) => {
       ID.unique(), // Generates a unique ID for the comment
       {
         postId, // Associate the comment with the post using Document ID
-        text: commentData.comment, // The actual comment content
+        text: commentText, // The actual comment content
         author: user.name || 'Anonymous',
+        userid: user.$id,
         createdAt: new Date().toISOString(), // Timestamp for the comment
       }
     );
@@ -38,19 +42,28 @@ export const addCommentToPost = async (postId, commentData, user) => {
       { comments: updatedComments } // Update the comments field with the new array
     );
 
-    return commentResponse;
+    return commentResponse; // Return the response for further use
   } catch (error) {
     console.error('Error adding comment or updating post:', error);
-    throw new Error('Failed to add comment.');
+    throw error; // Propagate the error
   }
 };
 
-export const deleteCommentFromPost = async (commentId) => {
-  try {
-    // Delete the comment
-    await databases.deleteDocument('66c49130002c58140821', '66d45230001f221e8b25', commentId); // Replace with your comments collection ID
-  } catch (error) {
-    console.error('Error deleting comment:', error);
-    throw new Error('Failed to delete comment.');
+
+export async function deleteComment(commentid){
+  console.log(commentid)
+  try{
+      await databases.deleteDocument(
+        '66c49130002c58140821', // Replace with your comments database ID
+        '66d45230001f221e8b25', // Replace with your comments collection ID
+        commentid , // documentId
+      )
+      return true ;
+  }catch(err){
+      console.log("error in deleting",err)
+      return false ;
   }
-};
+}
+
+
+

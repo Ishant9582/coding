@@ -56,6 +56,7 @@ export async function  createPost({Title , slug , content , image,status,userid}
  // delete
  export async function deletePost(slug){
     try{
+        console.log(slug)
         await databases.deleteDocument(
             conf.appwriteDatabaseId, // databaseId
             conf.appwriteCollectionId, // collectionId
