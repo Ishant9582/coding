@@ -43,11 +43,10 @@ function Protected({ children }) {
             navigate('/');
         }
     }, [slug, userData, navigate]);
-
     useEffect(() => {
         if (post && !isAuthor && !isAdmin) {
             toast.error("you should be  the author or admin to perform this action")
-            navigate('/');
+            navigate('/all-posts');
         }
     }, [post, isAuthor, isAdmin, navigate]);
 

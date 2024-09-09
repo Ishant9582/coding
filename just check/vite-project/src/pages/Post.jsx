@@ -15,18 +15,22 @@ export default function Post() {
   const [showAlert, setShowAlert] = useState(true); // For controlling the alert visibility
   const { slug } = useParams();
   const navigate = useNavigate();
-  const userData = useSelector((state) => state.auth.userData);
+  
   const dispatch = useDispatch();
+  const [isAuthor, setIsAuthor] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const userData = useSelector((state) => state.auth.userData);
 
-  const isAdmin = userData ? userData.labels === "admin" : false;
-  const isAuthor = post && userData ? post.userId === userData.$id : false;
-
+  // console.log(post)
+  // console.log(userData)
   useEffect(() => {
     if (slug) {
       getPost(slug)
         .then((fetchedPost) => {
           if (fetchedPost) {
             setPost(fetchedPost);
+            setIsAuthor(fetchedPost.userid === userData.$id);
+            setIsAdmin(userData.labels == "admin");
             setComments(fetchedPost.comments || []); // Initialize comments
             toast.success("Post fetched successfully");
           } else {
@@ -65,7 +69,8 @@ export default function Post() {
   const closeAlert = () => {
     setShowAlert(false); // This will hide the alert box
   };
-
+  console.log(isAdmin);
+  console.log(isAuthor) ;
   return post ? (
     <>
     <Container>
